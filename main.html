@@ -1,0 +1,490 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Благодарю</title>
+</head>
+<body>
+<!--<div class="fake-header" id="fake-header"></div>-->
+<header class="header">
+    <div class="header-top">
+        <div class="wrapper">
+            <ul class="header-top-nav">
+                <li class="header-top-nav__link"><a href="#">О сервисе</a></li>
+                <li class="header-top-nav__link"><a href="#">Вопрос-ответ</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="header-bottom">
+        <div class="wrapper">
+            <div class="header-bottom-content">
+                <a href="#" class="header-logo">
+                    <img src="assets/img/header-logo.svg" alt="logo">
+                </a>
+                <div class="header-search">
+                    <label for="header-search">
+                        <input type="text" class="header-search__el" id="header-search" name="header-search"
+                               placeholder="Искать товары">
+                    </label>
+                    <button class="btn-bg btn-search">Поиск</button>
+                </div>
+                <div class="header-account">
+                    <button class="btn submit-an-ad">
+                        <svg>
+                            <use xlink:href="assets/img/sprites/sprite.svg#plus"></use>
+                        </svg>
+                        Подать объявление
+                    </button>
+                    <button class="btn-white sign-in">Войти</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<div class="page">
+    <div class="wrapper">
+        <div class="page-container">
+            <aside class="aside">
+
+            </aside>
+            <div class="page-content">
+                <main class="main" style="background: url(assets/img/bg-main.jpg) no-repeat center/cover">
+                    <h1 class="main__title">Прими или отдай
+                        <span>в дар</span>
+                    </h1>
+                    <p class="main__description">
+                        Возможно, кому-то ваша вещь очень нужна
+                    </p>
+                    <div class="main-search">
+                        <form action="#" class="main-search-form">
+                            <div class="form-group-search">
+                                <label for="form-search">Поиск по товарам</label>
+                                <input type="text" placeholder="Искать товары" name="form-search"
+                                       class="form-search-input" id="form-search">
+                            </div>
+                            <div class="form-group-search form-group-search--select">
+                                <label for="selectBanner">Область</label>
+                                <select name="country" class="custom-select custom-old" id="selectBanner">
+                                    <option value="minsk" selected>Минск</option>
+                                    <option value="brest">Минская область</option>
+                                    <option value="grodno">Гродненская область</option>
+                                    <option value="gomel">Гомельская область</option>
+                                    <option value="mogilev">Могилевская область</option>
+                                    <option value="vit">Витебская область</option>
+                                </select>
+                            </div>
+                            <div class="form-group-search form-group-search--select-new">
+                                <label for="selectBannerNew">Город / Район</label>
+                                <select name="city" class="custom-select new-select" data-select="new-list"
+                                        id="selectBannerNew">
+                                </select>
+                            </div>
+                            <div class="form-group-search">
+                                <button class="btn-bg btn--main-search">
+                                    Найти
+                                    <svg>
+                                        <use xlink:href="assets/img/sprites/sprite.svg#search-white"></use>
+                                    </svg>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </main>
+                <div class="viewed">
+                    <h2 class="title-section">Ранее вы смотрели</h2>
+                    <div class="viewed-slider">
+                        <a href="https://www.google.com/search?q=dog+img&tbm=isch&ved=2ahUKEwj_j7To9aH8AhWDwgIHHSh6Bn0Q2-cCegQIABAA&oq=dog+img&gs_lcp=CgNpbWcQAzIECCMQJzIECAAQHjIECAAQHjIGCAAQBRAeMgkIABCABBAKEBg6BAgAEEM6BQgAEIAEUIsGWKgNYMcPaABwAHgAgAFeiAGjA5IBATWYAQCgAQGqAQtnd3Mtd2l6LWltZ8ABAQ&sclient=img&ei=AyevY7-CHoOFi-gPqPSZ6Ac&bih=1306&biw=2560#imgrc=u61zC0xCLTOo1M" class="viewed-slider__item">
+                        <span class="viewed-slider__item-img">
+                            <img src="assets/img/card/item-1.jpg" alt="alt">
+                        </span>
+                            <span class="viewed-slider__item-description">
+                                      <span class="viewed-slider__item-title">Зеркало с люминесцентной подсветкой (120х75 см).  290G - SP20</span>
+                                <span class="viewed-slider__item-data">28.11.2022 в 12:02</span>
+                            </span>
+                            <span class="favorite-card">
+                            </span>
+                        </a>
+                        <a href="#" class="viewed-slider__item">
+                        <span class="viewed-slider__item-img">
+                            <img src="assets/img/card/item-2.jpg" alt="alt">
+                        </span>
+                            <span class="viewed-slider__item-description">
+                                  <span class="viewed-slider__item-title">Свитер желтый из нейлона (размер S)</span>
+                            <span class="viewed-slider__item-data">28.11.2022 в 12:02</span>
+                            </span>
+                            <span class="favorite-card">
+                            </span>
+                        </a>
+                        <a href="#" class="viewed-slider__item">
+                        <span class="viewed-slider__item-img">
+                            <img src="https://images.unsplash.com/photo-1615751072497-5f5169febe17?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8Y3V0ZSUyMGRvZ3xlbnwwfHwwfHw%3D&w=1000&q=80" alt="alt">
+                        </span>
+                            <span class="viewed-slider__item-description">
+                                      <span class="viewed-slider__item-title">Зеркало с люминесцентной подсветкой (120х75 см).  290G - SP20</span>
+                                <span class="viewed-slider__item-data">28.11.2022 в 12:02</span>
+                            </span>
+                            <span class="favorite-card">
+                            </span>
+                        </a>
+                        <a href="#" class="viewed-slider__item">
+                        <span class="viewed-slider__item-img">
+                            <img src="assets/img/card/item-2.jpg" alt="alt">
+                        </span>
+                            <span class="viewed-slider__item-description">
+                                  <span class="viewed-slider__item-title">Свитер желтый из нейлона (размер S)</span>
+                            <span class="viewed-slider__item-data">28.11.2022 в 12:02</span>
+                            </span>
+                            <span class="favorite-card">
+                            </span>
+                        </a>
+                        <a href="#" class="viewed-slider__item">
+                        <span class="viewed-slider__item-img">
+                            <img src="assets/img/card/item-1.jpg" alt="alt">
+                        </span>
+                            <span class="viewed-slider__item-description">
+                                      <span class="viewed-slider__item-title">Зеркало с люминесцентной подсветкой (120х75 см).  290G - SP20</span>
+                                <span class="viewed-slider__item-data">28.11.2022 в 12:02</span>
+                            </span>
+                            <span class="favorite-card">
+                            </span>
+                        </a>
+                        <a href="#" class="viewed-slider__item">
+                        <span class="viewed-slider__item-img">
+                            <img src="assets/img/card/item-2.jpg" alt="alt">
+                        </span>
+                            <span class="viewed-slider__item-description">
+                                  <span class="viewed-slider__item-title">Свитер желтый из нейлона (размер S)</span>
+                            <span class="viewed-slider__item-data">28.11.2022 в 12:02</span>
+                            </span>
+                            <span class="favorite-card">
+                            </span>
+                        </a>
+                        <a href="#" class="viewed-slider__item">
+                        <span class="viewed-slider__item-img">
+                            <img src="assets/img/card/item-1.jpg" alt="alt">
+                        </span>
+                            <span class="viewed-slider__item-description">
+                                      <span class="viewed-slider__item-title">Зеркало с люминесцентной подсветкой (120х75 см).  290G - SP20</span>
+                                <span class="viewed-slider__item-data">28.11.2022 в 12:02</span>
+                            </span>
+                            <span class="favorite-card">
+                            </span>
+                        </a>
+                        <a href="#" class="viewed-slider__item">
+                        <span class="viewed-slider__item-img">
+                            <img src="assets/img/card/item-2.jpg" alt="alt">
+                        </span>
+                            <span class="viewed-slider__item-description">
+                                  <span class="viewed-slider__item-title">Свитер желтый из нейлона (размер S)</span>
+                            <span class="viewed-slider__item-data">28.11.2022 в 12:02</span>
+                            </span>
+                            <span class="favorite-card">
+                            </span>
+                        </a>
+                        <a href="#" class="viewed-slider__item">
+                        <span class="viewed-slider__item-img">
+                            <img src="assets/img/card/item-1.jpg" alt="alt">
+                        </span>
+                            <span class="viewed-slider__item-description">
+                                      <span class="viewed-slider__item-title">Зеркало с люминесцентной подсветкой (120х75 см).  290G - SP20</span>
+                                <span class="viewed-slider__item-data">28.11.2022 в 12:02</span>
+                            </span>
+                            <span class="favorite-card">
+                            </span>
+                        </a>
+                        <a href="#" class="viewed-slider__item">
+                        <span class="viewed-slider__item-img">
+                            <img src="assets/img/card/item-2.jpg" alt="alt">
+                        </span>
+                            <span class="viewed-slider__item-description">
+                                  <span class="viewed-slider__item-title">Свитер желтый из нейлона (размер S)</span>
+                            <span class="viewed-slider__item-data">28.11.2022 в 12:02</span>
+                            </span>
+                            <span class="favorite-card">
+                            </span>
+                        </a>
+                        <a href="#" class="viewed-slider__item">
+                        <span class="viewed-slider__item-img">
+                            <img src="assets/img/card/item-1.jpg" alt="alt">
+                        </span>
+                            <span class="viewed-slider__item-description">
+                                      <span class="viewed-slider__item-title">Зеркало с люминесцентной подсветкой (120х75 см).  290G - SP20</span>
+                                <span class="viewed-slider__item-data">28.11.2022 в 12:02</span>
+                            </span>
+                            <span class="favorite-card">
+                            </span>
+                        </a>
+                        <a href="#" class="viewed-slider__item">
+                        <span class="viewed-slider__item-img">
+                            <img src="assets/img/card/item-2.jpg" alt="alt">
+                        </span>
+                            <span class="viewed-slider__item-description">
+                                  <span class="viewed-slider__item-title">Свитер желтый из нейлона (размер S)</span>
+                            <span class="viewed-slider__item-data">28.11.2022 в 12:02</span>
+                            </span>
+                            <span class="favorite-card">
+                            </span>
+                        </a>
+                    </div>
+                    <div class="viewed-slider-arrows">
+                        <div class="viewed-slider-prev">
+                            <svg>
+                                <use xlink:href="assets/img/sprites/sprite.svg#arrow-prev">
+                                </use>
+                            </svg>
+                        </div>
+                        <div class="viewed-slider-next">
+                            <svg>
+                                <use xlink:href="assets/img/sprites/sprite.svg#arrow-next">
+                                </use>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+                <div class="banner-mini">
+                   <div class="banner-mini-title">
+                       Благо-Дарю
+                       <span>помог отдать</span>
+                   </div>
+                    <div class="banner-mini-cnt">
+                        37 549
+                        <span>вещей</span>
+                    </div>
+                </div>
+                <div class="announcements">
+                    <div class="announcements-header">
+                        <h2 class="title-section">
+                            Все объявления
+                        </h2>
+                        <div class="announcements-switch">
+                            <div class="announcements-switch__item switch-list active">
+                                <svg width="22" height="18" viewBox="0 0 22 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M1 8H7C7.26522 8 7.51957 7.89464 7.70711 7.70711C7.89464 7.51957 8 7.26522 8 7V1C8 0.734784 7.89464 0.48043 7.70711 0.292893C7.51957 0.105357 7.26522 0 7 0H1C0.734784 0 0.48043 0.105357 0.292893 0.292893C0.105357 0.48043 0 0.734784 0 1V7C0 7.26522 0.105357 7.51957 0.292893 7.70711C0.48043 7.89464 0.734784 8 1 8ZM2 2H6V6H2V2ZM7 18C7.26522 18 7.51957 17.8946 7.70711 17.7071C7.89464 17.5196 8 17.2652 8 17V11C8 10.7348 7.89464 10.4804 7.70711 10.2929C7.51957 10.1054 7.26522 10 7 10H1C0.734784 10 0.48043 10.1054 0.292893 10.2929C0.105357 10.4804 0 10.7348 0 11V17C0 17.2652 0.105357 17.5196 0.292893 17.7071C0.48043 17.8946 0.734784 18 1 18H7ZM2 12H6V16H2V12ZM21 3H11C10.7348 3 10.4804 3.10536 10.2929 3.29289C10.1054 3.48043 10 3.73478 10 4C10 4.26522 10.1054 4.51957 10.2929 4.70711C10.4804 4.89464 10.7348 5 11 5H21C21.2652 5 21.5196 4.89464 21.7071 4.70711C21.8946 4.51957 22 4.26522 22 4C22 3.73478 21.8946 3.48043 21.7071 3.29289C21.5196 3.10536 21.2652 3 21 3ZM21 13H11C10.7348 13 10.4804 13.1054 10.2929 13.2929C10.1054 13.4804 10 13.7348 10 14C10 14.2652 10.1054 14.5196 10.2929 14.7071C10.4804 14.8946 10.7348 15 11 15H21C21.2652 15 21.5196 14.8946 21.7071 14.7071C21.8946 14.5196 22 14.2652 22 14C22 13.7348 21.8946 13.4804 21.7071 13.2929C21.5196 13.1054 21.2652 13 21 13Z"/>
+                                    <path d="M1 8H7C7.26522 8 7.51957 7.89464 7.70711 7.70711C7.89464 7.51957 8 7.26522 8 7V1C8 0.734784 7.89464 0.48043 7.70711 0.292893C7.51957 0.105357 7.26522 0 7 0H1C0.734784 0 0.48043 0.105357 0.292893 0.292893C0.105357 0.48043 0 0.734784 0 1V7C0 7.26522 0.105357 7.51957 0.292893 7.70711C0.48043 7.89464 0.734784 8 1 8ZM2 2H6V6H2V2ZM7 18C7.26522 18 7.51957 17.8946 7.70711 17.7071C7.89464 17.5196 8 17.2652 8 17V11C8 10.7348 7.89464 10.4804 7.70711 10.2929C7.51957 10.1054 7.26522 10 7 10H1C0.734784 10 0.48043 10.1054 0.292893 10.2929C0.105357 10.4804 0 10.7348 0 11V17C0 17.2652 0.105357 17.5196 0.292893 17.7071C0.48043 17.8946 0.734784 18 1 18H7ZM2 12H6V16H2V12ZM21 3H11C10.7348 3 10.4804 3.10536 10.2929 3.29289C10.1054 3.48043 10 3.73478 10 4C10 4.26522 10.1054 4.51957 10.2929 4.70711C10.4804 4.89464 10.7348 5 11 5H21C21.2652 5 21.5196 4.89464 21.7071 4.70711C21.8946 4.51957 22 4.26522 22 4C22 3.73478 21.8946 3.48043 21.7071 3.29289C21.5196 3.10536 21.2652 3 21 3ZM21 13H11C10.7348 13 10.4804 13.1054 10.2929 13.2929C10.1054 13.4804 10 13.7348 10 14C10 14.2652 10.1054 14.5196 10.2929 14.7071C10.4804 14.8946 10.7348 15 11 15H21C21.2652 15 21.5196 14.8946 21.7071 14.7071C21.8946 14.5196 22 14.2652 22 14C22 13.7348 21.8946 13.4804 21.7071 13.2929C21.5196 13.1054 21.2652 13 21 13Z"/>
+                                </svg>
+                            </div>
+                            <div class="announcements-switch__item switch-card">
+                                <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <mask id="path-1-inside-1_404_2873" fill="white">
+                                        <rect width="8" height="8" rx="1" stroke-width="0"/>
+                                    </mask>
+                                    <rect width="8" height="8" rx="1"  stroke-width="4" mask="url(#path-1-inside-1_404_2873)"/>
+                                    <mask id="path-2-inside-2_404_2873" fill="white">
+                                        <rect x="10" width="8" height="8" rx="1" stroke-width="0"/>
+                                    </mask>
+                                    <rect x="10" width="8" height="8" rx="1"  stroke-width="4" mask="url(#path-2-inside-2_404_2873)"/>
+                                    <mask id="path-3-inside-3_404_2873" fill="white">
+                                        <rect x="10" y="10" width="8" height="8" rx="1" stroke-width="0"/>
+                                    </mask>
+                                    <rect x="10" y="10" width="8" height="8" rx="1"  stroke-width="4" mask="url(#path-3-inside-3_404_2873)"/>
+                                    <mask id="path-4-inside-4_404_2873" fill="white">
+                                        <rect y="10" width="8" height="8" rx="1" stroke-width="0"/>
+                                    </mask>
+                                    <rect y="10" width="8" height="8" rx="1" stroke-width="4" mask="url(#path-4-inside-4_404_2873)"/>
+                                </svg>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="announcements-content">
+                        <div class="announcements-content__item announcements-content__item--list">
+                            <a href="#" class="announcements-list__item">
+                                <div class="announcements-img">
+                                    <img src="assets/img/announcements-list/item-1.jpg" alt="img">
+                                </div>
+                                <div class="announcements-description">
+                                    <div class="announcements-description__head">
+                                        <h3>ШИНЫ, ДИСКИ на Мерседес оригинал R16 подходят Sprinter, Vito, и другие Ме.  Колпаки, R16, б/у</h3>
+                                        <span class="favorite-card"></span>
+                                    </div>
+                                    <div class="announcements-description__location">
+                                        <div class="location">
+                                            <svg>
+                                                <use xlink:href="assets/img/sprites/sprite.svg#location"></use>
+                                            </svg>
+                                            Минск, Партизанский район
+                                        </div>
+                                        <div class="announcements-data">
+                                            26.09.2022 в 12:02
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="#" class="announcements-list__item">
+                                <div class="announcements-img">
+                                    <img src="assets/img/announcements-list/item-2.jpg" alt="img">
+                                </div>
+                                <div class="announcements-description">
+                                    <div class="announcements-description__head">
+                                        <h3>Свитер желтый из нейлона (размер S)</h3>
+                                        <span class="favorite-card"></span>
+                                    </div>
+                                    <div class="announcements-description__location">
+                                        <div class="location">
+                                            <svg>
+                                                <use xlink:href="assets/img/sprites/sprite.svg#location"></use>
+                                            </svg>
+                                            Минск, Партизанский район
+                                        </div>
+                                        <div class="announcements-data">
+                                            26.09.2022 в 12:02
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+
+                        </div>
+                        <div class="announcements-content__item announcements-content__item--card">
+                            <a href="#" class="announcements-card__item">
+                        <span class="announcements-card__item-img">
+                            <img src="assets/img/card/item-3.jpg" alt="alt">
+                        </span>
+                                <span class="viewed-slider__item-description">
+                                  <span class="announcements-card__item--title">Зеркало с люминесцентной подсветкой (120х75 см).</span>
+                            <span class="viewed-slider__item-data">28.11.2022 в 12:02</span>
+                            </span>
+                                <span class="favorite-card">
+                            </span>
+                            </a>
+                            <a href="#" class="announcements-card__item">
+                        <span class="announcements-card__item-img">
+                            <img src="assets/img/card/item-4.jpg" alt="alt">
+                        </span>
+                                <span class="viewed-slider__item-description">
+                                  <span class="announcements-card__item--title">ШИНЫ, ДИСКИ на Мерседес оригинал R16 подходят Sprinter, Vito, и другие Ме.
+Колпаки, R16, б/у )</span>
+                            <span class="viewed-slider__item-data">28.11.2022 в 12:02</span>
+                            </span>
+                                <span class="favorite-card">
+                            </span>
+                            </a>
+                            <a href="#" class="announcements-card__item">
+                        <span class="announcements-card__item-img">
+                            <img src="assets/img/card/item-2.jpg" alt="alt">
+                        </span>
+                                <span class="viewed-slider__item-description">
+                                  <span class="announcements-card__item--title">Свитер желтый из нейлона (размер S)</span>
+                            <span class="viewed-slider__item-data">28.11.2022 в 12:02</span>
+                            </span>
+                                <span class="favorite-card">
+                            </span>
+                            </a>
+                            <a href="#" class="announcements-card__item">
+                        <span class="announcements-card__item-img">
+                            <img src="assets/img/card/item-2.jpg" alt="alt">
+                        </span>
+                                <span class="viewed-slider__item-description">
+                                  <span class="announcements-card__item--title">Свитер желтый из нейлона (размер S)</span>
+                            <span class="viewed-slider__item-data">28.11.2022 в 12:02</span>
+                            </span>
+                                <span class="favorite-card">
+                            </span>
+                            </a>
+                            <a href="#" class="announcements-card__item">
+                        <span class="announcements-card__item-img">
+                            <img src="assets/img/card/item-2.jpg" alt="alt">
+                        </span>
+                                <span class="viewed-slider__item-description">
+                                  <span class="announcements-card__item--title">Свитер желтый из нейлона (размер S)</span>
+                            <span class="viewed-slider__item-data">28.11.2022 в 12:02</span>
+                            </span>
+                                <span class="favorite-card">
+                            </span>
+                            </a>
+                            <a href="#" class="announcements-card__item">
+                        <span class="announcements-card__item-img">
+                            <img src="assets/img/card/item-3.jpg" alt="alt">
+                        </span>
+                                <span class="viewed-slider__item-description">
+                                  <span class="announcements-card__item--title">Зеркало с люминесцентной подсветкой (120х75 см).</span>
+                            <span class="viewed-slider__item-data">28.11.2022 в 12:02</span>
+                            </span>
+                                <span class="favorite-card">
+                            </span>
+                            </a>
+                            <a href="#" class="announcements-card__item">
+                        <span class="announcements-card__item-img">
+                            <img src="assets/img/card/item-4.jpg" alt="alt">
+                        </span>
+                                <span class="viewed-slider__item-description">
+                                  <span class="announcements-card__item--title">ШИНЫ, ДИСКИ на Мерседес оригинал R16 подходят Sprinter, Vito, и другие Ме.
+Колпаки, R16, б/у )</span>
+                            <span class="viewed-slider__item-data">28.11.2022 в 12:02</span>
+                            </span>
+                                <span class="favorite-card">
+                            </span>
+                            </a>
+                            <a href="#" class="announcements-card__item">
+                        <span class="announcements-card__item-img">
+                            <img src="assets/img/card/item-4.jpg" alt="alt">
+                        </span>
+                                <span class="viewed-slider__item-description">
+                                  <span class="announcements-card__item--title">ШИНЫ, ДИСКИ на Мерседес оригинал R16 подходят Sprinter, Vito, и другие Ме.
+Колпаки, R16, б/у )</span>
+                            <span class="viewed-slider__item-data">28.11.2022 в 12:02</span>
+                            </span>
+                                <span class="favorite-card">
+                            </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--<svg>
+    <use xlink:href="assets/img/sprites/sprite.svg#search">
+
+    </use>
+</svg>-->
+
+<!--<div class="pop-up pop-up&#45;&#45;call">
+    <span class="pop-up-cross">
+        <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M0.338896 0.338896C0.790758 -0.112965 1.52314 -0.112965 1.97476 0.338896L7.42773 5.79188L12.8807 0.338896C13.3326 -0.112965 14.065 -0.112965 14.5166 0.338896C14.9684 0.790758 14.9684 1.52313 14.5166 1.97476L9.06359 7.42773L14.5166 12.8807C14.9684 13.3326 14.9684 14.065 14.5166 14.5166C14.0647 14.9684 13.3323 14.9682 12.8807 14.5166L7.42773 9.06359L1.97476 14.5166C1.52289 14.9682 0.790517 14.9682 0.338896 14.5166C-0.112965 14.0647 -0.112965 13.3323 0.338896 12.8807L5.79187 7.42773L0.338896 1.97476C-0.112965 1.52289 -0.112965 0.790517 0.338896 0.338896Z"
+      fill="#A0A0A0"/>
+</svg>
+</span>
+    <div class="pop-up-title">Форма обратной связи</div>
+    <form action="#" method="post" name="from-call" class="call-form">
+        <div class="form-group">
+            <input type="text" id="pop-up-call-name" placeholder=" " autocomplete="off">
+            <label for="pop-up-call-name">Ваше имя</label>
+        </div>
+        <div class="form-group">
+            <input type="tel" class="subscribe-email" id="pop-up-call-phone" placeholder=" " autocomplete="off">
+            <label for="pop-up-call-phone">Номер телефона</label>
+        </div>
+        <div class="form-group">
+            <input type="email" class="subscribe-email" id="pop-up-call-email" placeholder=" " autocomplete="off">
+            <label for="pop-up-call-email">E-mail</label>
+            <div class="error-message">Некорректный адрес электронной почты</div>
+        </div>
+        <div class="form-group">
+            <textarea name="pop-up-subscribe-text" id="pop-up-call-text" contenteditable placeholder=" "></textarea>
+            <label for="pop-up-call-text">Сообщение</label>
+        </div>
+        <div class="form-checkbox">
+            <input type="checkbox" checked class="custom-checkbox" id="call-personal-data" name="happy" value="yes">
+            <label for="call-personal-data" class="personal-data-item">Подтверждаю согласие на обработку моих
+                персональных данных.
+                <a href="#" class="personal-data__link">(Политика конфиденциальности персональных данных)</a></label>
+        </div>
+        <button class="button-gray button" type="submit">Подписаться</button>
+    </form>
+</div>-->
+
+
+<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jQueryFormStyler/2.0.2/jquery.formstyler.min.js"></script>
+<script src="js/slick.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
+
+
