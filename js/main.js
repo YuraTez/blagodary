@@ -663,9 +663,13 @@ const listOld = document.querySelectorAll(".custom-old");
 
 window.onload = selectCountry;
 
-listOld.forEach((el)=>{
-    el.onchange = selectCountry;
-})
+
+function selectAdd(){
+    listOld.forEach((el)=>{
+        el.onchange = selectCountry;
+    })
+}
+selectAdd()
 
 function selectCountry(ev){
     $('[data-select="new-list"]').empty();
@@ -730,3 +734,50 @@ imgResize()
 $(window).resize(function(){
     imgResize()
 });
+
+const announcementsSwitch = document.querySelector(".announcements-switch");
+
+announcementsSwitch.addEventListener("click", () => {
+    let target = event.target;
+    $(".announcements-switch__item").removeClass("active");
+    if (target.closest(".switch-list")) {
+        $(".switch-list").addClass("active");
+        $(".announcements-content__item--card").removeClass("active");
+        $(".announcements-content__item--list").addClass("active");
+    }
+    else if (target.closest(".switch-card")) {
+        $(".switch-card").addClass("active");
+        $(".announcements-content__item--list").removeClass("active");
+        $(".announcements-content__item--card").addClass("active");
+    }
+})
+
+
+$("#header-search").on("focus", function (){
+    $(".header-search").addClass("active")
+})
+
+$("#header-search").on("focusout", function (){
+    $(".header-search").removeClass("active")
+})
+
+$(".btn-reset").on("click", function (){
+
+    setTimeout(function(){
+        $('.custom-old').trigger('refresh');
+        $('.new-select').trigger('refresh');
+    }, 0);
+
+})
+
+
+
+
+
+
+
+
+
+
+
+
