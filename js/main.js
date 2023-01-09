@@ -649,9 +649,8 @@ $('.fake-zoom').on('click', function (e) {
 });*/
 
 
-
 let listsArr = {
-    minsk: ["Любой", "Минская область", "Брестская область", "Гродненская область","Гомельская область","Могилевская область","Витебская область"],
+    minsk: ["Любой", "Минская область", "Брестская область", "Гродненская область", "Гомельская область", "Могилевская область", "Витебская область"],
     brest: ["Любой", "Фрунзунский", "Лененский", "Московский"],
     grodno: ["Любой", "Фрунзунский", "Лененский", "Московский"],
     gomel: ["Любой", "Фрунзунский", "Лененский", "Московский"],
@@ -664,22 +663,24 @@ const listOld = document.querySelectorAll(".custom-old");
 window.onload = selectCountry;
 
 
-function selectAdd(){
-    listOld.forEach((el)=>{
+function selectAdd() {
+    listOld.forEach((el) => {
         el.onchange = selectCountry;
     })
 }
+
 selectAdd()
 
-function selectCountry(ev){
+function selectCountry(ev) {
     $('[data-select="new-list"]').empty();
     let itemSelect = this.value || "minsk", o;
-    for(let i = 0; i < listsArr[itemSelect].length; i++){
-        o = new Option(listsArr[itemSelect][i],i,false,false);
+    for (let i = 0; i < listsArr[itemSelect].length; i++) {
+        o = new Option(listsArr[itemSelect][i], i, false, false);
 
         $('[data-select="new-list"]').append(o);
 
-    };
+    }
+    ;
     $('.custom-select').styler();
 
     $('.new-select').trigger('refresh');
@@ -708,30 +709,32 @@ $('.viewed-slider').slick({
 });
 
 
-function moreItem(item){
+function moreItem(item) {
     $('.' + item).on('click', function () {
 
         let target = event.target;
 
-        if(target.classList.contains("favorite-card")){
+        if (target.classList.contains("favorite-card")) {
             event.preventDefault()
             target.classList.toggle("active");
         }
     });
 }
+
 moreItem("viewed-slider__item");
 moreItem("announcements-list__item");
 moreItem("announcements-card__item");
 
 
-let heightImgCard = 319/233
+let heightImgCard = 319 / 233
 
-function imgResize(){
+function imgResize() {
     $('.viewed-slider__item-img').height($('.viewed-slider__item-img').width() / heightImgCard);
 }
+
 imgResize()
 
-$(window).resize(function(){
+$(window).resize(function () {
     imgResize()
 });
 
@@ -744,8 +747,7 @@ announcementsSwitch.addEventListener("click", () => {
         $(".switch-list").addClass("active");
         $(".announcements-content__item--card").removeClass("active");
         $(".announcements-content__item--list").addClass("active");
-    }
-    else if (target.closest(".switch-card")) {
+    } else if (target.closest(".switch-card")) {
         $(".switch-card").addClass("active");
         $(".announcements-content__item--list").removeClass("active");
         $(".announcements-content__item--card").addClass("active");
@@ -753,28 +755,64 @@ announcementsSwitch.addEventListener("click", () => {
 })
 
 
-$("#header-search").on("focus", function (){
+$("#header-search").on("focus", function () {
     $(".header-search").addClass("active")
 })
 
-$("#header-search").on("focusout", function (){
+$("#header-search").on("focusout", function () {
     $(".header-search").removeClass("active")
 })
 
-$(".btn-reset").on("click", function (){
+$(".btn-reset").on("click", function () {
 
-    setTimeout(function(){
+    setTimeout(function () {
         $('.custom-old').trigger('refresh');
         $('.new-select').trigger('refresh');
     }, 0);
 
 })
 
+const categoryListItem = document.querySelectorAll(".category-list__item--pop-up");
+const categoryBlockList = document.querySelectorAll(".category-content");
 
 
+function removeActive(arr, active, data) {
+    arr.forEach((el) => {
+        let dataContentBlock = el.getAttribute("data-category");
+        el.classList.remove(active)
+        if (dataContentBlock === data) {
+            el.classList.add("is-active")
+        }
+    })
+}
+
+if (categoryListItem) {
+    categoryListItem.forEach((el) => {
+        el.addEventListener("click", () => {
+            event.preventDefault()
+            let dataValue = el.getAttribute("data-category")
+
+            removeActive(categoryListItem, "is-active");
+            removeActive(categoryBlockList, "is-active", dataValue);
+            el.classList.add("is-active")
 
 
+        })
+    })
+}
 
+const btnCategoryOpen = document.querySelector(".btn-category-open");
+    btnCategoryClose = document.querySelector(".btn-category-close");
+    categoryPopUp = document.querySelector(".category-pop-up");
+
+btnCategoryOpen.addEventListener("click",()=>{
+    console.log('11')
+    categoryPopUp.classList.add("active");
+})
+
+btnCategoryClose.addEventListener("click",()=>{
+    categoryPopUp.classList.remove("active");
+})
 
 
 
