@@ -9,7 +9,7 @@
     <title>Благодарю</title>
 </head>
 <body>
-<!--<div class="fake-header" id="fake-header"></div>-->
+
 <header class="header">
     <div class="header-top">
         <div class="wrapper">
@@ -39,7 +39,18 @@
                         </svg>
                         Подать объявление
                     </button>
+                    <button class="btn submit-an-ad submit-an-ad--mobile">
+                        <svg>
+                            <use xlink:href="assets/img/sprites/sprite.svg#plus"></use>
+                        </svg>
+                    </button>
                     <button class="btn-white sign-in">Войти</button>
+                    <button class="btn-white sign-in sign-in--mobile">
+                        <svg>
+                            <use xlink:href="assets/img/sprites/sprite.svg#sign-in-mobile">
+                            </use>
+                        </svg>
+                    </button>
                 </div>
             </div>
         </div>
@@ -49,195 +60,222 @@
     <div class="wrapper">
         <div class="page-container">
             <aside class="aside">
-                <button class="btn-bg btn-category btn-category-open">
-                    <svg>
-                        <use xlink:href="assets/img/sprites/sprite.svg#btn-category"></use>
-                    </svg>
-                    Категории
-                </button>
-                <ul class="category-list">
-                    <li class="category-list__item active"><a href="#">
+                <div class="aside__item aside__item-btn">
+                    <button class="btn-bg btn-category btn-category-open">
                         <svg>
-                            <use xlink:href="assets/img/sprites/category.svg#item-1"></use>
+                            <use xlink:href="assets/img/sprites/sprite.svg#btn-category"></use>
                         </svg>
-                        Все категории</a></li>
-                    <li class="category-list__item"><a href="#">
+                        Категории
+                    </button>
+                    <button class="btn-bg btn-category mobile_menu">
                         <svg>
-                            <use xlink:href="assets/img/sprites/category.svg#item-2"></use>
+                            <use xlink:href="assets/img/sprites/sprite.svg#btn-category"></use>
                         </svg>
-                        Бытовая техника</a></li>
-                    <li class="category-list__item"><a href="#"><svg>
-                        <use xlink:href="assets/img/sprites/category.svg#item-3"></use>
-                    </svg>
-                        Компьютерная техника</a></li>
-                    <li class="category-list__item"><a href="#">
-                      <svg>
-                          <use xlink:href="assets/img/sprites/category.svg#item-4"></use>
-                      </svg>
-                        Телефоны и планшеты</a></li>
-                    <li class="category-list__item"><a href="#">
+                        Категории
+                    </button>
+                    <button class="btn-filter">
+                        Фильтры
                         <svg>
-                            <use xlink:href="assets/img/sprites/category.svg#item-5"></use>
+                            <use xlink:href="assets/img/sprites/sprite.svg#filter-btn"></use>
                         </svg>
-                        Электроника</a></li>
-                    <li class="category-list__item"><a href="#">
-                        <svg>
-                            <use xlink:href="assets/img/sprites/category.svg#item-6"></use>
-                        </svg>
-                        Женский гардероб</a></li>
-                    <li class="category-list__item"><a href="#">
-                        <svg>
-                            <use xlink:href="assets/img/sprites/category.svg#item-7"></use>
-                        </svg>
-                        Мужской гардероб</a></li>
-                    <li class="category-list__item"><a href="#">
-                        <svg>
-                            <use xlink:href="assets/img/sprites/category.svg#item-8"></use>
-                        </svg>
-                        Красота и здоровье</a></li>
-                    <li class="category-list__item no-fill"><a href="#">
-                        <svg>
-                            <use xlink:href="assets/img/sprites/category.svg#item-9"></use>
-                        </svg>
-                        Все для детей и мам</a></li>
-                    <li class="category-list__item"><a href="#">
-                        <svg>
-                            <use xlink:href="assets/img/sprites/category.svg#item-10"></use>
-                        </svg>
-                        Мебель</a></li>
-                    <li class="category-list__item"><a href="#">
-                        <svg>
-                            <use xlink:href="assets/img/sprites/category.svg#item-11"></use>
-                        </svg>
-                        Все для дома</a></li>
-                    <li class="category-list__item"><a href="#">
-                        <svg>
-                            <use xlink:href="assets/img/sprites/category.svg#item-12"></use>
-                        </svg>
-                        Ремонт и стройка</a></li>
-                    <li class="category-list__item no-fill"><a href="#">
-                        <svg>
-                            <use xlink:href="assets/img/sprites/category.svg#item-13"></use>
-                        </svg>
-                        Сад и огород</a></li>
-                    <li class="category-list__item no-fill"><a href="#">
-                        <svg>
-                            <use xlink:href="assets/img/sprites/category.svg#item-14"></use>
-                        </svg>
-                        Хобби, спорт и туризм</a></li>
-                    <li class="category-list__item"><a href="#">
-                        <svg>
-                            <use xlink:href="assets/img/sprites/category.svg#item-15"></use>
-                        </svg>
-                        Свадьба и праздники</a></li>
-                    <li class="category-list__item no-fill"><a href="#">
-                        <svg>
-                            <use xlink:href="assets/img/sprites/category.svg#item-16"></use>
-                        </svg>
-                        Животные</a></li>
-                    <li class="category-list__item"><a href="#">
-                        <svg>
-                            <use xlink:href="assets/img/sprites/category.svg#item-17"></use>
-                        </svg>
-                        Прочее</a></li>
-                </ul>
-                <div class="aside-form">
-                    <form class="aside-form-search" action="#">
-                        <div class="form-group-search form-group-search--select aside-form__item">
-                            <label for="selectForm">Область</label>
-                            <select name="country" class="custom-select custom-old" id="selectForm">
-                                <option value="minsk" selected>Минск</option>
-                                <option value="brest">Минская область</option>
-                                <option value="grodno">Гродненская область</option>
-                                <option value="gomel">Гомельская область</option>
-                                <option value="mogilev">Могилевская область</option>
-                                <option value="vit">Витебская область</option>
-                            </select>
-                        </div>
-                        <div class="form-group-search form-group-search--select-new aside-form__item">
-                            <label for="selectFormNew">Город / Район</label>
-                            <select name="city" class="custom-select new-select" data-select="new-list"
-                                    id="selectFormNew">
-                            </select>
-                        </div>
-                        <div class="form-group-search aside-form__item">
-                            <label for="range-min">Диапазон</label>
-                            <div class="form-group-range">
-                                <div class="range__item range-min">
-                                    <input type="text" class="range__item-input" placeholder="От" name="range-min" id="range-min">
-                                </div>
-                                <div class="range__item range-max">
-                                    <input type="text" class="range__item-input" placeholder="От" name="range-max">
+                    </button>
+                </div>
+               <div class="aside__item aside__item-category">
+                   <ul class="category-list">
+                       <li class="category-list__item active"><a href="#">
+                           <svg>
+                               <use xlink:href="assets/img/sprites/category.svg#item-1"></use>
+                           </svg>
+                           Все категории</a></li>
+                       <li class="category-list__item"><a href="#">
+                           <svg>
+                               <use xlink:href="assets/img/sprites/category.svg#item-2"></use>
+                           </svg>
+                           Бытовая техника</a></li>
+                       <li class="category-list__item"><a href="#"><svg>
+                           <use xlink:href="assets/img/sprites/category.svg#item-3"></use>
+                       </svg>
+                           Компьютерная техника</a></li>
+                       <li class="category-list__item"><a href="#">
+                           <svg>
+                               <use xlink:href="assets/img/sprites/category.svg#item-4"></use>
+                           </svg>
+                           Телефоны и планшеты</a></li>
+                       <li class="category-list__item"><a href="#">
+                           <svg>
+                               <use xlink:href="assets/img/sprites/category.svg#item-5"></use>
+                           </svg>
+                           Электроника</a></li>
+                       <li class="category-list__item"><a href="#">
+                           <svg>
+                               <use xlink:href="assets/img/sprites/category.svg#item-6"></use>
+                           </svg>
+                           Женский гардероб</a></li>
+                       <li class="category-list__item"><a href="#">
+                           <svg>
+                               <use xlink:href="assets/img/sprites/category.svg#item-7"></use>
+                           </svg>
+                           Мужской гардероб</a></li>
+                       <li class="category-list__item"><a href="#">
+                           <svg>
+                               <use xlink:href="assets/img/sprites/category.svg#item-8"></use>
+                           </svg>
+                           Красота и здоровье</a></li>
+                       <li class="category-list__item no-fill"><a href="#">
+                           <svg>
+                               <use xlink:href="assets/img/sprites/category.svg#item-9"></use>
+                           </svg>
+                           Все для детей и мам</a></li>
+                       <li class="category-list__item"><a href="#">
+                           <svg>
+                               <use xlink:href="assets/img/sprites/category.svg#item-10"></use>
+                           </svg>
+                           Мебель</a></li>
+                       <li class="category-list__item"><a href="#">
+                           <svg>
+                               <use xlink:href="assets/img/sprites/category.svg#item-11"></use>
+                           </svg>
+                           Все для дома</a></li>
+                       <li class="category-list__item"><a href="#">
+                           <svg>
+                               <use xlink:href="assets/img/sprites/category.svg#item-12"></use>
+                           </svg>
+                           Ремонт и стройка</a></li>
+                       <li class="category-list__item no-fill"><a href="#">
+                           <svg>
+                               <use xlink:href="assets/img/sprites/category.svg#item-13"></use>
+                           </svg>
+                           Сад и огород</a></li>
+                       <li class="category-list__item no-fill"><a href="#">
+                           <svg>
+                               <use xlink:href="assets/img/sprites/category.svg#item-14"></use>
+                           </svg>
+                           Хобби, спорт и туризм</a></li>
+                       <li class="category-list__item"><a href="#">
+                           <svg>
+                               <use xlink:href="assets/img/sprites/category.svg#item-15"></use>
+                           </svg>
+                           Свадьба и праздники</a></li>
+                       <li class="category-list__item no-fill"><a href="#">
+                           <svg>
+                               <use xlink:href="assets/img/sprites/category.svg#item-16"></use>
+                           </svg>
+                           Животные</a></li>
+                       <li class="category-list__item"><a href="#">
+                           <svg>
+                               <use xlink:href="assets/img/sprites/category.svg#item-17"></use>
+                           </svg>
+                           Прочее</a></li>
+                   </ul>
+               </div>
+                <div class="aside__item aside__item-form">
+                    <div class="aside-form">
+                        <form class="aside-form-search" action="#">
+                            <div class="form-group-search aside-form__item mobile-input-search">
+                                <label for="form-search-mobile">Поиск по товарам</label>
+                                <input type="text" placeholder="Искать товары" name="form-search"
+                                       class="form-search-input" id="form-search-mobile">
+                            </div>
+                            <div class="form-group-search form-group-search--select aside-form__item">
+                                <label for="selectForm">Область</label>
+                                <select name="country" class="custom-select custom-old" id="selectForm">
+                                    <option value="minsk" selected>Минск</option>
+                                    <option value="brest">Минская область</option>
+                                    <option value="grodno">Гродненская область</option>
+                                    <option value="gomel">Гомельская область</option>
+                                    <option value="mogilev">Могилевская область</option>
+                                    <option value="vit">Витебская область</option>
+                                </select>
+                            </div>
+                            <div class="form-group-search form-group-search--select-new aside-form__item">
+                                <label for="selectFormNew">Город / Район</label>
+                                <select name="city" class="custom-select new-select" data-select="new-list"
+                                        id="selectFormNew">
+                                </select>
+                            </div>
+                            <div class="form-group-search aside-form__item">
+                                <label for="range-min">Диапазон</label>
+                                <div class="form-group-range">
+                                    <div class="range__item range-min">
+                                        <input type="text" class="range__item-input" placeholder="От" name="range-min" id="range-min">
+                                    </div>
+                                    <div class="range__item range-max">
+                                        <input type="text" class="range__item-input" placeholder="От" name="range-max">
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="form-group-search aside-form__item">
-                            <label>Выбор из одного варианта</label>
-                            <div class="form-group-wrapper">
-                                <div class="form-group__item">
-                                    <label for="radio-1">Параметр 1</label>
-                                    <input type="radio" id="radio-1" name="radio-btn">
-                                </div>
-                                <div class="form-group__item">
-                                    <label for="radio-2">Параметр 2 c длинным названием в 2 строки</label>
-                                    <input type="radio" id="radio-2" name="radio-btn">
-                                </div>
-                                <div class="form-group__item">
-                                    <label for="radio-3">Параметр 2</label>
-                                    <input type="radio" id="radio-3" name="radio-btn">
-                                </div>
-                                <div class="form-group__item">
-                                    <label for="radio-4">Параметр 2</label>
-                                    <input type="radio" id="radio-4" name="radio-btn">
+                            <div class="form-group-search aside-form__item">
+                                <label>Выбор из одного варианта</label>
+                                <div class="form-group-wrapper">
+                                    <div class="form-group__item">
+                                        <label for="radio-1">Параметр 1</label>
+                                        <input type="radio" id="radio-1" name="radio-btn">
+                                    </div>
+                                    <div class="form-group__item">
+                                        <label for="radio-2">Параметр 2 c длинным названием в 2 строки</label>
+                                        <input type="radio" id="radio-2" name="radio-btn">
+                                    </div>
+                                    <div class="form-group__item">
+                                        <label for="radio-3">Параметр 2</label>
+                                        <input type="radio" id="radio-3" name="radio-btn">
+                                    </div>
+                                    <div class="form-group__item">
+                                        <label for="radio-4">Параметр 2</label>
+                                        <input type="radio" id="radio-4" name="radio-btn">
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="form-group-search aside-form__item">
-                            <label>Множественный выбор</label>
-                            <div class="form-group-wrapper checkbox">
-                                <div class="form-group__item">
-                                    <label for="checkbox-1" class="label-checkbox">
-                                        <input type="checkbox" name="value-1" id="checkbox-1">
-                                        <span>Параметр 1</span>
-                                    </label>
-
-                                </div>
-                                <div class="form-group__item checkbox">
-                                    <label for="checkbox-2" class="label-checkbox">
-                                        <input type="checkbox" name="value-1" id="checkbox-2">
-                                        <span>Параметр 2</span>
-                                    </label>
-                                </div>
-                                <div class="form-group__item checkbox">
-                                    <label for="checkbox-3" class="label-checkbox">
-                                        <input type="checkbox" name="value-1" id="checkbox-3">
-                                        <span>Параметр 3</span>
+                            <div class="form-group-search aside-form__item">
+                                <label>Множественный выбор</label>
+                                <div class="form-group-wrapper checkbox">
+                                    <div class="form-group__item">
+                                        <label for="checkbox-1" class="label-checkbox">
+                                            <input type="checkbox" name="value-1" id="checkbox-1">
+                                            <span>Параметр 1</span>
                                         </label>
+
+                                    </div>
+                                    <div class="form-group__item checkbox">
+                                        <label for="checkbox-2" class="label-checkbox">
+                                            <input type="checkbox" name="value-1" id="checkbox-2">
+                                            <span>Параметр 2</span>
+                                        </label>
+                                    </div>
+                                    <div class="form-group__item checkbox">
+                                        <label for="checkbox-3" class="label-checkbox">
+                                            <input type="checkbox" name="value-1" id="checkbox-3">
+                                            <span>Параметр 3</span>
+                                        </label>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <button class="btn-bg btn--main-search">
-                            Найти
-                            <svg>
-                                <use xlink:href="assets/img/sprites/sprite.svg#search-white"></use>
-                            </svg>
-                        </button>
-                        <button type="reset" class="btn-reset">
-                            <svg>
-                                <use xlink:href="assets/img/sprites/sprite.svg#cross-btn"></use>
-                            </svg>
-                            Сбросить фильтры</button>
-                    </form>
+                            <div class="aside-form__item--btn">
+                                <button class="btn-bg btn--main-search">
+                                    Найти
+                                    <svg>
+                                        <use xlink:href="assets/img/sprites/sprite.svg#search-white"></use>
+                                    </svg>
+                                </button>
+                                <button type="reset" class="btn-reset btn-reset--scroll">
+                                    <svg>
+                                        <use xlink:href="assets/img/sprites/sprite.svg#cross-btn"></use>
+                                    </svg>
+                                    Сбросить фильтры</button>
+                            </div>
+                        </form>
+                    </div>
                 </div>
             </aside>
             <div class="page-content">
                 <main class="main" style="background: url(assets/img/bg-main.jpg) no-repeat center/cover">
-                    <h1 class="main__title">Прими или отдай
-                        <span>в дар</span>
-                    </h1>
-                    <p class="main__description">
-                        Возможно, кому-то ваша вещь очень нужна
-                    </p>
+                    <div class="main-wrapper-text">
+                        <h1 class="main__title">Прими или отдай
+                            <span>в дар</span>
+                        </h1>
+                        <p class="main__description">
+                            Возможно, кому-то ваша вещь очень нужна
+                        </p>
+                    </div>
                     <div class="main-search">
                         <form action="#" class="main-search-form">
                             <div class="form-group-search">
@@ -426,7 +464,7 @@
                 <div class="banner-mini">
                    <div class="banner-mini-title">
                        Благо-Дарю
-                       <span>помог отдать</span>
+                       <span>помог <i>отдать</i></span>
                    </div>
                     <div class="banner-mini-cnt">
                         37 549
@@ -717,10 +755,12 @@
                         </svg>
                         Бытовая техника</a></li>
                     <li class="category-list__item category-list__item--pop-up is-active" data-category="computer">
-                        <a href="#"><svg>
+                        <a href="#">
+                            <svg>
                         <use xlink:href="assets/img/sprites/category.svg#item-3"></use>
                     </svg>
-                        Компьютерная техника</a></li>
+                        Компьютерная техника
+                        </a></li>
                     <li class="category-list__item category-list__item--pop-up" data-category="appliances" ><a href="#">
                         <svg>
                             <use xlink:href="assets/img/sprites/category.svg#item-4"></use>
@@ -963,51 +1003,223 @@
     </div>
 </div>
 
+<div class="popUp-overlay">
+    <div class="popUp-overlay-header">
+        <span class="popUp-title">Фильтры</span>
+        <span class="popUp-cross">
+            <svg>
+                <use xlink:href="assets/img/sprites/sprite.svg#cross-popup"></use>
+            </svg>
+        </span>
+    </div>
+</div>
 
 
-
+<div class="mobile_menu_container">
+    <div class="mobile_menu_content">
+        <div class="mobile_menu_content__title">
+            Категории
+            <span class="popUp-cross mobile_menu__cross">
+            <svg>
+                <use xlink:href="assets/img/sprites/sprite.svg#cross-popup"></use>
+            </svg>
+        </span>
+        </div>
+        <ul>
+            <li class="category-list__item active"><a href="#">
+                <svg>
+                    <use xlink:href="assets/img/sprites/category.svg#item-1"></use>
+                </svg>
+                Все категории
+               </a></li>
+            <li class="category-list__item">
+                <a href="#" class="parent">
+                    <svg>
+                    <use xlink:href="assets/img/sprites/category.svg#item-2"></use>
+                </svg>
+                    Бытовая техника</a>
+                <ul>
+                    <li><a href="#" class="back">Назад
+                        <span class="popUp-cross mobile_menu__cross">
+            <svg>
+                <use xlink:href="assets/img/sprites/sprite.svg#cross-popup"></use>
+            </svg>
+        </span>
+                    </a></li>
+                    <li><a href="#">Все объявления категории</a></li>
+                    <li>
+                        <div class="menu-subcategory">Комплектующие</div>
+                        <div class="menu-subcategory-content">
+                            <a href="#">SSD Блоки питания</a>
+                            <a href="#">Аккумуляторы</a>
+                            <a href="#">Видеокарты</a>
+                            <a href="#">Кулеры</a>
+                            <a href="#">Материнские платы</a>
+                            <a href="#">Оперативная память</a>
+                            <a href="#">Оптические приводы</a>
+                            <a href="#">Процессоры</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="menu-subcategory">Компьютеры / системные блоки</div>
+                        <div class="menu-subcategory-content">
+                            <a href="#">Компьютеры</a>
+                            <a href="#">Микрокомпьютеры</a>
+                            <a href="#">Моноблоки</a>
+                            <a href="#">Мониторы</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="menu-subcategory">Периферия и аксессуары</div>
+                        <div class="menu-subcategory-content">
+                            <a href="#">IP-камеры</a>
+                            <a href="#">USB Flash</a>
+                            <a href="#">USB-хабы</a>
+                            <a href="#">Боксы для жестких дисков</a>
+                        </div>
+                    </li>
+                </ul>
+            </li>
+            <li class="category-list__item">
+                <a href="#" class="parent">
+                    <svg>
+                        <use xlink:href="assets/img/sprites/category.svg#item-3"></use>
+                    </svg>
+                    Компьютерная техника
+                </a>
+                <ul>
+                    <li><a href="#" class="back">Назад
+                        <span class="popUp-cross mobile_menu__cross">
+            <svg>
+                <use xlink:href="assets/img/sprites/sprite.svg#cross-popup"></use>
+            </svg>
+        </span>
+                    </a></li>
+                    <li><a href="#">Все объявления категории</a></li>
+                    <li>
+                        <div class="menu-subcategory">Комплектующие</div>
+                        <div class="menu-subcategory-content">
+                            <a href="#">SSD Блоки питания</a>
+                            <a href="#">Аккумуляторы</a>
+                            <a href="#">Видеокарты</a>
+                            <a href="#">Кулеры</a>
+                            <a href="#">Материнские платы</a>
+                            <a href="#">Оперативная память</a>
+                            <a href="#">Оптические приводы</a>
+                            <a href="#">Процессоры</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="menu-subcategory">Компьютеры / системные блоки</div>
+                        <div class="menu-subcategory-content">
+                            <a href="#">Компьютеры</a>
+                            <a href="#">Микрокомпьютеры</a>
+                            <a href="#">Моноблоки</a>
+                            <a href="#">Мониторы</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="menu-subcategory">Периферия и аксессуары</div>
+                        <div class="menu-subcategory-content">
+                            <a href="#">IP-камеры</a>
+                            <a href="#">USB Flash</a>
+                            <a href="#">USB-хабы</a>
+                            <a href="#">Боксы для жестких дисков</a>
+                        </div>
+                    </li>
+                </ul>
+            </li>
+            <li class="category-list__item"><a href="#">
+                <svg>
+                    <use xlink:href="assets/img/sprites/category.svg#item-4"></use>
+                </svg>
+                Телефоны и планшеты
+            </a></li>
+            <li class="category-list__item"><a href="#">
+                <svg>
+                    <use xlink:href="assets/img/sprites/category.svg#item-5"></use>
+                </svg>
+                Электроника
+            </a></li>
+            <li class="category-list__item"><a href="#">
+                <svg>
+                    <use xlink:href="assets/img/sprites/category.svg#item-6"></use>
+                </svg>
+                Женский гардероб
+            </a></li>
+            <li class="category-list__item"><a href="#">
+                <svg>
+                    <use xlink:href="assets/img/sprites/category.svg#item-7"></use>
+                </svg>
+                Мужской гардероб
+            </a></li>
+            <li class="category-list__item"><a href="#">
+                <svg>
+                    <use xlink:href="assets/img/sprites/category.svg#item-8"></use>
+                </svg>
+                Красота и здоровье
+            </a></li>
+            <li class="category-list__item no-fill"><a href="#">
+                <svg>
+                    <use xlink:href="assets/img/sprites/category.svg#item-9"></use>
+                </svg>
+                Все для детей и мам
+            </a></li>
+            <li class="category-list__item"><a href="#">
+                <svg>
+                    <use xlink:href="assets/img/sprites/category.svg#item-10"></use>
+                </svg>
+                Мебель
+            </a></li>
+            <li class="category-list__item"><a href="#">
+                <svg>
+                    <use xlink:href="assets/img/sprites/category.svg#item-11"></use>
+                </svg>
+                Все для дома
+            </a></li>
+            <li class="category-list__item"><a href="#">
+                <svg>
+                    <use xlink:href="assets/img/sprites/category.svg#item-12"></use>
+                </svg>
+                Ремонт и стройка
+            </a></li>
+            <li class="category-list__item no-fill"><a href="#">
+                <svg>
+                    <use xlink:href="assets/img/sprites/category.svg#item-13"></use>
+                </svg>
+                Сад и огород</a></li>
+            <li class="category-list__item no-fill"><a href="#">
+                <svg>
+                    <use xlink:href="assets/img/sprites/category.svg#item-14"></use>
+                </svg>
+                Хобби, спорт и туризм
+            </a></li>
+            <li class="category-list__item"><a href="#">
+                <svg>
+                    <use xlink:href="assets/img/sprites/category.svg#item-15"></use>
+                </svg>
+                Свадьба и праздники
+            </a></li>
+            <li class="category-list__item no-fill"><a href="#">
+                <svg>
+                    <use xlink:href="assets/img/sprites/category.svg#item-16"></use>
+                </svg>
+                Животные
+            </a></li>
+            <li class="category-list__item"><a href="#">
+                <svg>
+                    <use xlink:href="assets/img/sprites/category.svg#item-17"></use>
+                </svg>
+                Прочее
+            </a></li>
+        </ul>
+    </div>
+</div>
+<div class="mobile_menu_overlay"></div>
 <!--<svg>
-    <use xlink:href="assets/img/sprites/sprite.svg#search">
-
-    </use>
+<use xlink:href="assets/img/sprites/sprite.svg#search">
+</use>
 </svg>-->
-
-<!--<div class="pop-up pop-up&#45;&#45;call">
-    <span class="pop-up-cross">
-        <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M0.338896 0.338896C0.790758 -0.112965 1.52314 -0.112965 1.97476 0.338896L7.42773 5.79188L12.8807 0.338896C13.3326 -0.112965 14.065 -0.112965 14.5166 0.338896C14.9684 0.790758 14.9684 1.52313 14.5166 1.97476L9.06359 7.42773L14.5166 12.8807C14.9684 13.3326 14.9684 14.065 14.5166 14.5166C14.0647 14.9684 13.3323 14.9682 12.8807 14.5166L7.42773 9.06359L1.97476 14.5166C1.52289 14.9682 0.790517 14.9682 0.338896 14.5166C-0.112965 14.0647 -0.112965 13.3323 0.338896 12.8807L5.79187 7.42773L0.338896 1.97476C-0.112965 1.52289 -0.112965 0.790517 0.338896 0.338896Z"
-      fill="#A0A0A0"/>
-</svg>
-</span>
-    <div class="pop-up-title">Форма обратной связи</div>
-    <form action="#" method="post" name="from-call" class="call-form">
-        <div class="form-group">
-            <input type="text" id="pop-up-call-name" placeholder=" " autocomplete="off">
-            <label for="pop-up-call-name">Ваше имя</label>
-        </div>
-        <div class="form-group">
-            <input type="tel" class="subscribe-email" id="pop-up-call-phone" placeholder=" " autocomplete="off">
-            <label for="pop-up-call-phone">Номер телефона</label>
-        </div>
-        <div class="form-group">
-            <input type="email" class="subscribe-email" id="pop-up-call-email" placeholder=" " autocomplete="off">
-            <label for="pop-up-call-email">E-mail</label>
-            <div class="error-message">Некорректный адрес электронной почты</div>
-        </div>
-        <div class="form-group">
-            <textarea name="pop-up-subscribe-text" id="pop-up-call-text" contenteditable placeholder=" "></textarea>
-            <label for="pop-up-call-text">Сообщение</label>
-        </div>
-        <div class="form-checkbox">
-            <input type="checkbox" checked class="custom-checkbox" id="call-personal-data" name="happy" value="yes">
-            <label for="call-personal-data" class="personal-data-item">Подтверждаю согласие на обработку моих
-                персональных данных.
-                <a href="#" class="personal-data__link">(Политика конфиденциальности персональных данных)</a></label>
-        </div>
-        <button class="button-gray button" type="submit">Подписаться</button>
-    </form>
-</div>-->
-
 
 <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jQueryFormStyler/2.0.2/jquery.formstyler.min.js"></script>
