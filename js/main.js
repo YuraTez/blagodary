@@ -1,3 +1,23 @@
+const header = document.querySelector(".header")
+const fakeHeader = document.querySelector(".fake-header");
+let widthWindow = window.innerWidth
+fakeHeader.style.height = header.offsetHeight + "px"
+const pageContent = document.querySelector(".page-content")
+const headerSearch = document.querySelector(".header-search")
+
+function positionSearchResize(){
+    let position = pageContent.getBoundingClientRect().left;
+    headerSearch.setAttribute('style', `position:absolute; left: ${position}px`)
+}
+
+if(pageContent && widthWindow > 1024){
+    positionSearchResize()
+    window.addEventListener("resize" , ()=>{
+        positionSearchResize()
+    })
+}
+
+
 let listsArr = {
     minsk: ["Любой", "Минская область", "Брестская область", "Гродненская область", "Гомельская область", "Могилевская область", "Витебская область"],
     brest: ["Любой", "Фрунзунский", "Лененский", "Московский"],
@@ -82,6 +102,11 @@ $(window).resize(function () {
 });
 
 const announcementsSwitch = document.querySelector(".announcements-switch");
+
+if(widthWindow < 457){
+    $(".announcements-content__item--list").removeClass("active");
+    $(".announcements-content__item--card").addClass("active");
+}
 
 announcementsSwitch.addEventListener("click", () => {
     let target = event.target;
@@ -171,11 +196,11 @@ popUpCross.addEventListener("click",()=>{
     popUpOverlay.classList.remove("active");
 })
 
-let scrollForm = $('.aside__item-form'),
+let scrollForm = $('.aside-form'),
     scrollForm_sh = scrollForm[0].scrollHeight ,
     scrollForm_h = scrollForm.height();
 
-const ScrollBlock = document.querySelector('.aside__item-form');
+const ScrollBlock = document.querySelector('.aside-form');
 const hasVerScroll= ScrollBlock.scrollHeight > ScrollBlock.clientHeight;
 
 if(hasVerScroll){
