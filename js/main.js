@@ -221,6 +221,16 @@ if(hasVerScroll){
 $(function() {
     $(document).on("click", ".mobile_menu_container .parent", function(e) {
         e.preventDefault();
+        let text = event.target.innerText
+        const crossTemplate = `
+        <span class="popUp-cross mobile_menu__cross">
+                             <svg>
+                <use xlink:href="assets/img/sprites/sprite.svg#cross-popup"></use>
+            </svg>
+                        </span>
+        `
+
+        event.target.nextElementSibling.querySelector("a").innerHTML = text + crossTemplate
         $(".mobile_menu_container .activity").removeClass("activity");
         $(this).siblings("ul").addClass("loaded").addClass("activity");
     });
