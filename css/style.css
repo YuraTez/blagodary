@@ -1113,6 +1113,10 @@ input[type="checkbox"]{
   border: 1px solid #059EA3;
 }
 
+.form-group__item label:has(+input[type=radio]:hover){
+  border: 1px solid #059EA3;
+}
+
 .form-group__item .label-checkbox{
   border: none;
   padding: 0;
@@ -1765,8 +1769,8 @@ input[type="checkbox"]{
   background: white url("../assets/img/arrow-next.svg") right 15px center no-repeat;
 }
 .mobile_menu_container ul li a.back {
-  padding: 15px 27px;
-  background: white url("../assets/img/arrow-back.svg") left 0 center no-repeat;
+  padding: 15px 30px;
+  background: white url("../assets/img/arrow-back.svg") left 17px no-repeat;
   justify-content: center;
   box-sizing: border-box;
   font-weight: 700;
@@ -1946,6 +1950,7 @@ input[type="checkbox"]{
   border: transparent;
 }
 
-.form-group-search .form-search-input:focus {
+.form-group-search .form-search-input:focus,
+.form-group-search .form-search-input:valid:not(:placeholder-shown){
   border: 1px solid #D1D1D1;
 }
