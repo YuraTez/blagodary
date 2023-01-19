@@ -1124,11 +1124,12 @@ input[type="checkbox"]{
 }
 .form-group__item label:has(+input[type=radio]:checked){
   border: 2px solid #059EA3;
-  padding: 8px 13px;
+  padding: 9px 14px;
 }
 
 .form-group__item label:has(+input[type=radio]:hover){
   border: 1px solid #059EA3;
+  padding: 10px 15px;
 }
 
 .form-group__item .label-checkbox{
