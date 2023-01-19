@@ -263,8 +263,18 @@ $(function() {
 })
 
 $('.menu-subcategory').on('click', function () {
+    event.preventDefault()
     let dropdown = $(this).parent();
     $(this).toggleClass("active");
     dropdown.find(".menu-subcategory-content").slideToggle( "slow");
 });
+
+$('.sign-in--mobile.is-active').on('click', function () {
+    $(".menu-authorized").addClass("active");
+});
+
+$('.menu-authorized__cross').on('click', function () {
+    $(".menu-authorized").removeClass("active");
+});
+
 
