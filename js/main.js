@@ -348,19 +348,25 @@ $('.btn-pick-up').on('click', function () {
 });
 
 
-let innerHeight = $(".card-description-text").height();
-let curHeight = $(".card-description-text").get(0).scrollHeight;
+
+if($(".card-description-text").length){
+    let innerHeight = $(".card-description-text").height();
+    let curHeight = $(".card-description-text").get(0).scrollHeight;
+
+    $('.card-description-text-btn').on('click', function () {
+        if(!this.classList.contains('active')){
+            $(".card-description-text").animate({height: curHeight}, 1000);
+        }else{
+            $(".card-description-text").animate({height: innerHeight}, 1000);
+        }
+        $(".card-description-text-btn").toggleClass("active");
+        $(".card-description-text").toggleClass("active");
+    });
+}
 
 
-$('.card-description-text-btn').on('click', function () {
-    if(!this.classList.contains('active')){
-        $(".card-description-text").animate({height: curHeight}, 1000);
-    }else{
-        $(".card-description-text").animate({height: innerHeight}, 1000);
-    }
-    $(".card-description-text-btn").toggleClass("active");
-    $(".card-description-text").toggleClass("active");
-});
+
+
 
 $('.total-rating').on('click', function () {
     $('.substrate').addClass("active")
