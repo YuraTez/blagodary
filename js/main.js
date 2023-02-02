@@ -57,8 +57,6 @@ function selectCountry(ev) {
 
 }
 
-console.log()
-
 if (innerWidth > 1220) {
 
     if ($('.viewed-slider').hasClass("viewed-slider--big")) {
@@ -391,4 +389,20 @@ $('.substrate').on('click', function () {
 $('.complain-form').on('submit', function () {
     $('.popUp').removeClass("active")
     $('.popUp-successful').addClass("active")
+});
+
+$('.ads-ratings-btn').on('click', function () {
+    $('.popUp-review').addClass("active")
+    $('.substrate').addClass("active")
+});
+
+$('.contact-support').on('click', function () {
+    $('.popUp-support').addClass("active")
+    $('.substrate').addClass("active")
+});
+
+$('.del-ed').on('click', function () {
+    event.preventDefault()
+    $('.popUp-rate').addClass("active")
+    $('.substrate').addClass("active")
 });
