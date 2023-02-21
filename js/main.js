@@ -224,8 +224,8 @@ if (categoryListItem) {
 }
 
 const btnCategoryOpen = document.querySelector(".btn-category-open");
-btnCategoryClose = document.querySelector(".btn-category-close");
-categoryPopUp = document.querySelector(".category-pop-up");
+const btnCategoryClose = document.querySelector(".btn-category-close");
+const categoryPopUp = document.querySelector(".category-pop-up");
 
 if (btnCategoryOpen) {
     btnCategoryOpen.addEventListener("click", () => {
@@ -434,55 +434,30 @@ $('.referral-link-btn').on('click', function () {
 });
 
 
-
-/*$('#calendar').dateRangePicker({
-    language: {
-        days: ['Воскресенье','Понедельник','Вторник','Среда','Четверг','Пятница','Суббота'],
-        daysShort: ['Вос','Пон','Вто','Сре','Чет','Пят','Суб'],
-        daysMin: ['Вс','Пн','Вт','Ср','Чт','Пт','Сб'],
-        months: ['Январь','Февраль','Март','Апрель','Май','Июнь','Июль','Август','Сентябрь','Октябрь','Ноябрь','Декабрь'],
-        monthsShort: ['Янв','Фев','Мар','Апр','Май','Июн','Июл','Авг','Сен','Окт','Ноя','Дек'],
-        today: 'Сегодня',
-        clear: 'Очистить',
-        dateFormat: 'dd.mm.yyyy',
-        timeFormat: 'hh:ii',
-        firstDay: 1
-    },
-    separator : ' to ',
-    position: "left top",
-    getValue: function()
-    {
-        if ($('#date-range200').val() && $('#date-range201').val() )
-            return $('#date-range200').val() + ' to ' + $('#date-range201').val();
-        else
-            return '';
-    },
-    setValue: function(s,s1,s2)
-    {
-        $('#date-range200').val(s1);
-        $('#date-range201').val(s2);
-    }
-}	)*/
-
-
 let dpMin, dpMax;
 
-dpMin = new AirDatepicker('#el1', {
+dpMin = new AirDatepicker('#AirDatepickerMin', {
     onSelect({date}) {
         dpMax.update({
             minDate: date
         })
-    }
+    },
+    autoClose: true
+
 })
 
-dpMax = new AirDatepicker('#el2', {
+dpMax = new AirDatepicker('#AirDatepickerMax', {
     onSelect({date}) {
         dpMin.update({
             maxDate: date
         })
-    }
+    },
+    autoClose: true,
 })
 
+new AirDatepicker('#dataUserBirth',{
+    autoClose: true
+});
 
 
 
