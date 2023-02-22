@@ -459,17 +459,29 @@ new AirDatepicker('#dataUserBirth',{
     autoClose: true
 });
 
+$(".dataUserTel").mask("+375 (99) 999-99-99");
 
 
+const templatePhone = `
+ <div class="form-group form-group--tel">
+     <label class="data-user__label data-user__label--tel">Контактный телефон</label>
+     <input type="tel" placeholder="+375 (xx) xxx-xx-xx" class="dataUserTel" name="new-number">
+ </div>
+`
 
+$('.add-new-phone').on('click', function () {
+    $('.form-tel-container').append(templatePhone)
+});
 
-
-
-
-
-
-
-
+$('.password-control').on('click', function () {
+    if ($(this).prev().attr('type') == 'password'){
+        $(this).addClass('view');
+        $(this).prev().attr('type', 'text');
+    } else {
+        $(this).removeClass('view');
+        $(this).prev().attr('type', 'password');
+    }
+});
 
 
 

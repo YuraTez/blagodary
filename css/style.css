@@ -213,6 +213,7 @@ body {
 .page-container {
   display: flex;
   gap: 30px;
+  min-height: 74vh;
 }
 
 .aside {
@@ -222,6 +223,10 @@ body {
 
 .page {
   margin: 18px 0 50px;
+}
+
+.page--cabinet{
+  margin: 30px 0 50px;
 }
 
 .page-content {
@@ -1446,6 +1451,10 @@ input[type="checkbox"] {
     margin-top: 15px;
   }
 
+  .page--cabinet{
+    margin-top: 30px;
+  }
+
   .aside,
   .page-content {
     width: 100%;
@@ -1789,6 +1798,10 @@ input[type="checkbox"] {
 
 .menu-subcategory-content a {
   padding-left: 20px !important;
+}
+
+.menu-subcategory-content a.active{
+  font-weight: 700;
 }
 
 .mobile_menu_container ul li a.parent {
@@ -3208,7 +3221,7 @@ input[type="checkbox"] {
 }
 
 .user-data {
-  padding: 30px 0 20px;
+  padding: 30px 0 0px;
 }
 
 .user-data-content {
@@ -4266,6 +4279,7 @@ input[type="checkbox"] {
 }
 
 .data-user .form-group{
+  position: relative;
   display: flex;
   flex-direction: column;
   min-width: 274px;
@@ -4310,5 +4324,122 @@ input[type="checkbox"] {
 
   .data-user-container{
     padding: 20px;
+  }
+
+  .data-user-btn{
+   margin: 0 auto;
+  }
+}
+
+.data-user-container--tel{
+  gap: 0;
+}
+
+.data-user__label--tel{
+  font-weight: 400;
+}
+
+.data-user-container--tel__text{
+  font-size: 13px;
+  line-height: 15px;
+  letter-spacing: -0.01em;
+  font-feature-settings: 'pnum' on, 'lnum' on;
+  margin: 10px 0 15px;
+}
+
+.add-new-phone{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.add-new-phone-btn{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: #FAE26E;
+  cursor: pointer;
+}
+
+.add-new-phone-btn svg{
+  width: 8px;
+  height: 8px;
+}
+
+.add-new-phone-text{
+  font-size: 13px;
+  line-height: 15px;
+  letter-spacing: -0.01em;
+  font-feature-settings: 'pnum' on, 'lnum' on;
+}
+
+.form-tel-container{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.password-requirements{
+  background: #F6F8F9;
+  border-radius: 6px;
+  padding: 20px 30px;
+  margin-bottom: 13px;
+}
+
+.password-requirements-title{
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: -0.01em;
+  font-feature-settings: 'pnum' on, 'lnum' on;
+  margin-bottom: 10px;
+}
+
+.password-requirements-list__item{
+  position: relative;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: -0.01em;
+  font-feature-settings: 'pnum' on, 'lnum' on;
+  color: #2A3548;
+  padding-left: 20px;
+}
+
+.password-requirements-list__item:before{
+  position: absolute;
+  content: "";
+  width: 1.5px;
+  height: 1.5px;
+  background: #2a3548;
+  left: 10px;
+  top: 6px;
+}
+
+
+.password-control {
+  position: absolute;
+  top: 44px;
+  right: 15px;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background: url("../assets/img/eye.svg") 0 0 no-repeat;
+  transition: 0.3s;
+}
+.password-control:hover {
+  background: url("../assets/img/eye-active.svg") 0 0 no-repeat;
+}
+
+@media (max-width: 768px) {
+  .password-requirements{
+    padding: 20px;
+  }
+  .page-container{
+    min-height: initial;
   }
 }
