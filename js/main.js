@@ -196,9 +196,9 @@ const categoryListItem = document.querySelectorAll(".category-list__item--pop-up
 const categoryBlockList = document.querySelectorAll(".category-content");
 
 
-function removeActive(arr, active, data) {
+function removeActive(arr, active, data, dataName) {
     arr.forEach((el) => {
-        let dataContentBlock = el.getAttribute("data-category");
+        let dataContentBlock = el.getAttribute(dataName);
         el.classList.remove(active)
         if (dataContentBlock === data) {
             el.classList.add("is-active")
@@ -213,13 +213,57 @@ if (categoryListItem) {
             let dataValue = el.getAttribute("data-category")
 
             removeActive(categoryListItem, "is-active");
-            removeActive(categoryBlockList, "is-active", dataValue);
+            removeActive(categoryBlockList, "is-active", dataValue,"data-category");
             el.classList.add("is-active")
 
 
         })
     })
 }
+
+const categoryForm = document.querySelectorAll(".category-selection-main .category-list__item");
+const categoryFormSelected = document.querySelectorAll(".category-selection-content__item");
+const categoryFormSelectedContent = document.querySelector(".category-selection-content");
+const categorySelectionReady = document.querySelector(".category-selection-ready")
+let formCategorySelectedItem = document.querySelector(".category-selection-ready__main")
+
+if (categoryForm) {
+    categoryForm.forEach((el) => {
+        el.addEventListener("click", () => {
+            event.preventDefault()
+            let dataValue = el.getAttribute("data-announcement-category")
+
+            removeActive(categoryForm, "is-active");
+            removeActive(categoryFormSelected, "is-active", dataValue, "data-announcement-category");
+            el.classList.add("is-active")
+
+        })
+    })
+
+
+    if(categoryFormSelectedContent){
+        categoryFormSelectedContent.addEventListener("click",(event)=>{
+            event.preventDefault()
+            let target = event.target;
+
+            if(target.closest(".category-selection-list__item")){
+                let text = target.closest(".category-selection-list__item").innerText;
+                $(".category-selection").hide(600)
+                $('html, body').animate({
+                    scrollTop: $("#categorySelection").offset().top - 120
+                }, 1000);
+                categorySelectionReady.classList.add("active")
+                formCategorySelectedItem.innerText = text
+            }
+        })
+    }
+
+    $(".category-selection-ready-btn").on("click", (event)=>{
+        categorySelectionReady.classList.remove("active")
+        $(".category-selection").show(600)
+    })
+}
+
 
 const btnCategoryOpen = document.querySelector(".btn-category-open");
 const btnCategoryClose = document.querySelector(".btn-category-close");
@@ -453,7 +497,11 @@ new AirDatepicker('#dataUserBirth', {
     autoClose: true
 });
 
-$(".dataUserTel").mask("+375 (99) 999-99-99");
+const maskPhone = () => {
+    $(".dataUserTel").mask("+375 (99) 999-99-99");
+}
+
+maskPhone()
 
 
 const templatePhone = `
@@ -465,6 +513,7 @@ const templatePhone = `
 
 $('.add-new-phone').on('click', function () {
     $('.form-tel-container').append(templatePhone)
+    maskPhone()
 });
 
 $('.password-control').on('click', function () {
@@ -577,9 +626,20 @@ if(dropzone){
 // enf loaded photo
 
 
+$("#announcementTextarea").on("input", function () {
+    $(".result-text-value").text(this.value.length)
+})
 
 
 
+$(".btn--form").on("click", function (event) {
+    event.preventDefault()
+    $(".popUp-error").addClass("active")
+    $('.substrate').addClass("active")
+})
 
 
-
+$(".popUp-error__btn").on("click", function () {
+    $(".popUp-error").removeClass("active")
+    $('.substrate').removeClass("active")
+})
