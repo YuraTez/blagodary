@@ -643,3 +643,33 @@ $(".popUp-error__btn").on("click", function () {
     $(".popUp-error").removeClass("active")
     $('.substrate').removeClass("active")
 })
+
+const questionItemBtnList = document.querySelectorAll('.question-block__item');
+const questionsList = document.querySelectorAll(".questions-item-header");
+const questionsContentList = document.querySelectorAll(".question-content__item");
+
+if(questionItemBtnList){
+    questionItemBtnList.forEach((item)=>{
+        item.addEventListener("click", function (){
+            $(".question-block__item").removeClass("active")
+            this.classList.add("active")
+            questionsContentList.forEach((el)=>{
+                el.classList.remove("active")
+                let valueItem = el.getAttribute("data-question");
+                if(valueItem === this.getAttribute("data-question")){
+                    el.classList.add("active")
+                }
+            })
+        })
+    })
+}
+
+if(questionsList !== null){
+    questionsList.forEach((el)=>{
+        el.addEventListener("click",function (){
+            el.classList.toggle("active");
+
+            $(this).siblings().slideToggle( "slow" );
+        })
+    })
+}

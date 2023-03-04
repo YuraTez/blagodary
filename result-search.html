@@ -56,6 +56,16 @@
         </div>
     </div>
 </header>
+<div class="bread-crumbs">
+    <div class="wrapper">
+        <ul class="bread-crumbs-list">
+            <li class="bread-crumbs-list__item"><a href="#">Главная</a></li>
+            <li class="bread-crumbs-list__item"><a href="#">Раздел</a></li>
+            <li class="bread-crumbs-list__item"><a href="#">Страница выбранного товара</a></li>
+            <li class="bread-crumbs-list__item mobile"><a href="#">Выбранный раздел товаров</a></li>
+        </ul>
+    </div>
+</div>
 <div class="page">
     <div class="wrapper">
         <div class="page-container">
@@ -269,213 +279,7 @@
                     </div>
                 </div>
             </aside>
-            <div class="page-content">
-                <main class="main" style="background: url(assets/img/bg-main.jpg) no-repeat center/cover">
-                    <div class="main-wrapper-text">
-                        <h1 class="main__title">Прими или отдай
-                            <span>в дар</span>
-                        </h1>
-                        <p class="main__description">
-                            Возможно, кому-то ваша вещь очень нужна
-                        </p>
-                    </div>
-                    <div class="main-search">
-                        <form action="#" class="main-search-form">
-                            <div class="form-group-search">
-                                <label for="form-search">Поиск по товарам</label>
-                                <input type="text" placeholder="Искать товары" name="form-search"
-                                       class="form-search-input" id="form-search">
-                            </div>
-                            <div class="form-group-search form-group-search--select">
-                                <label for="selectBanner">Область</label>
-                                <select name="country" class="custom-select custom-old" id="selectBanner">
-                                    <option value="minsk" selected>Минск</option>
-                                    <option value="brest">Минская область</option>
-                                    <option value="grodno">Гродненская область</option>
-                                    <option value="gomel">Гомельская область</option>
-                                    <option value="mogilev">Могилевская область</option>
-                                    <option value="vit">Витебская область</option>
-                                </select>
-                            </div>
-                            <div class="form-group-search form-group-search--select-new">
-                                <label for="selectBannerNew">Город / Район</label>
-                                <select name="city" class="custom-select new-select" data-select="new-list"
-                                        id="selectBannerNew">
-                                </select>
-                            </div>
-                            <div class="form-group-search">
-                                <button class="btn-bg btn--main-search">
-                                    Найти
-                                    <svg>
-                                        <use xlink:href="assets/img/sprites/sprite.svg#search-white"></use>
-                                    </svg>
-                                </button>
-                            </div>
-                        </form>
-                    </div>
-                </main>
-                <div class="viewed">
-                    <h2 class="title-section">Ранее вы смотрели</h2>
-                    <div class="viewed-slider">
-                        <a href="https://www.google.com/search?q=dog+img&tbm=isch&ved=2ahUKEwj_j7To9aH8AhWDwgIHHSh6Bn0Q2-cCegQIABAA&oq=dog+img&gs_lcp=CgNpbWcQAzIECCMQJzIECAAQHjIECAAQHjIGCAAQBRAeMgkIABCABBAKEBg6BAgAEEM6BQgAEIAEUIsGWKgNYMcPaABwAHgAgAFeiAGjA5IBATWYAQCgAQGqAQtnd3Mtd2l6LWltZ8ABAQ&sclient=img&ei=AyevY7-CHoOFi-gPqPSZ6Ac&bih=1306&biw=2560#imgrc=u61zC0xCLTOo1M"
-                           class="viewed-slider__item">
-                        <span class="viewed-slider__item-img">
-                            <img src="assets/img/card/item-1.jpg" alt="alt">
-                        </span>
-                            <span class="viewed-slider__item-description">
-                                      <span class="viewed-slider__item-title">Зеркало с люминесцентной подсветкой (120х75 см).  290G - SP20</span>
-                                <span class="viewed-slider__item-data">28.11.2022 в 12:02</span>
-                            </span>
-                            <span class="favorite-card">
-                            </span>
-                        </a>
-                        <a href="#" class="viewed-slider__item">
-                        <span class="viewed-slider__item-img">
-                            <img src="assets/img/card/item-2.jpg" alt="alt">
-                        </span>
-                            <span class="viewed-slider__item-description">
-                                  <span class="viewed-slider__item-title">Свитер желтый из нейлона (размер S)</span>
-                            <span class="viewed-slider__item-data">28.11.2022 в 12:02</span>
-                            </span>
-                            <span class="favorite-card">
-                            </span>
-                        </a>
-                        <a href="#" class="viewed-slider__item">
-                        <span class="viewed-slider__item-img">
-                            <img src="https://images.unsplash.com/photo-1615751072497-5f5169febe17?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8Y3V0ZSUyMGRvZ3xlbnwwfHwwfHw%3D&w=1000&q=80"
-                                 alt="alt">
-                        </span>
-                            <span class="viewed-slider__item-description">
-                                      <span class="viewed-slider__item-title">Зеркало с люминесцентной подсветкой (120х75 см).  290G - SP20</span>
-                                <span class="viewed-slider__item-data">28.11.2022 в 12:02</span>
-                            </span>
-                            <span class="favorite-card">
-                            </span>
-                        </a>
-                        <a href="#" class="viewed-slider__item">
-                        <span class="viewed-slider__item-img">
-                            <img src="assets/img/card/item-2.jpg" alt="alt">
-                        </span>
-                            <span class="viewed-slider__item-description">
-                                  <span class="viewed-slider__item-title">Свитер желтый из нейлона (размер S)</span>
-                            <span class="viewed-slider__item-data">28.11.2022 в 12:02</span>
-                            </span>
-                            <span class="favorite-card">
-                            </span>
-                        </a>
-                        <a href="#" class="viewed-slider__item">
-                        <span class="viewed-slider__item-img">
-                            <img src="assets/img/card/item-1.jpg" alt="alt">
-                        </span>
-                            <span class="viewed-slider__item-description">
-                                      <span class="viewed-slider__item-title">Зеркало с люминесцентной подсветкой (120х75 см).  290G - SP20</span>
-                                <span class="viewed-slider__item-data">28.11.2022 в 12:02</span>
-                            </span>
-                            <span class="favorite-card">
-                            </span>
-                        </a>
-                        <a href="#" class="viewed-slider__item">
-                        <span class="viewed-slider__item-img">
-                            <img src="assets/img/card/item-2.jpg" alt="alt">
-                        </span>
-                            <span class="viewed-slider__item-description">
-                                  <span class="viewed-slider__item-title">Свитер желтый из нейлона (размер S)</span>
-                            <span class="viewed-slider__item-data">28.11.2022 в 12:02</span>
-                            </span>
-                            <span class="favorite-card">
-                            </span>
-                        </a>
-                        <a href="#" class="viewed-slider__item">
-                        <span class="viewed-slider__item-img">
-                            <img src="assets/img/card/item-1.jpg" alt="alt">
-                        </span>
-                            <span class="viewed-slider__item-description">
-                                      <span class="viewed-slider__item-title">Зеркало с люминесцентной подсветкой (120х75 см).  290G - SP20</span>
-                                <span class="viewed-slider__item-data">28.11.2022 в 12:02</span>
-                            </span>
-                            <span class="favorite-card">
-                            </span>
-                        </a>
-                        <a href="#" class="viewed-slider__item">
-                        <span class="viewed-slider__item-img">
-                            <img src="assets/img/card/item-2.jpg" alt="alt">
-                        </span>
-                            <span class="viewed-slider__item-description">
-                                  <span class="viewed-slider__item-title">Свитер желтый из нейлона (размер S)</span>
-                            <span class="viewed-slider__item-data">28.11.2022 в 12:02</span>
-                            </span>
-                            <span class="favorite-card">
-                            </span>
-                        </a>
-                        <a href="#" class="viewed-slider__item">
-                        <span class="viewed-slider__item-img">
-                            <img src="assets/img/card/item-1.jpg" alt="alt">
-                        </span>
-                            <span class="viewed-slider__item-description">
-                                      <span class="viewed-slider__item-title">Зеркало с люминесцентной подсветкой (120х75 см).  290G - SP20</span>
-                                <span class="viewed-slider__item-data">28.11.2022 в 12:02</span>
-                            </span>
-                            <span class="favorite-card">
-                            </span>
-                        </a>
-                        <a href="#" class="viewed-slider__item">
-                        <span class="viewed-slider__item-img">
-                            <img src="assets/img/card/item-2.jpg" alt="alt">
-                        </span>
-                            <span class="viewed-slider__item-description">
-                                  <span class="viewed-slider__item-title">Свитер желтый из нейлона (размер S)</span>
-                            <span class="viewed-slider__item-data">28.11.2022 в 12:02</span>
-                            </span>
-                            <span class="favorite-card">
-                            </span>
-                        </a>
-                        <a href="#" class="viewed-slider__item">
-                        <span class="viewed-slider__item-img">
-                            <img src="assets/img/card/item-1.jpg" alt="alt">
-                        </span>
-                            <span class="viewed-slider__item-description">
-                                      <span class="viewed-slider__item-title">Зеркало с люминесцентной подсветкой (120х75 см).  290G - SP20</span>
-                                <span class="viewed-slider__item-data">28.11.2022 в 12:02</span>
-                            </span>
-                            <span class="favorite-card">
-                            </span>
-                        </a>
-                        <a href="#" class="viewed-slider__item">
-                        <span class="viewed-slider__item-img">
-                            <img src="assets/img/card/item-2.jpg" alt="alt">
-                        </span>
-                            <span class="viewed-slider__item-description">
-                                  <span class="viewed-slider__item-title">Свитер желтый из нейлона (размер S)</span>
-                            <span class="viewed-slider__item-data">28.11.2022 в 12:02</span>
-                            </span>
-                            <span class="favorite-card">
-                            </span>
-                        </a>
-                    </div>
-                    <div class="viewed-slider-arrows slider-arrows-container">
-                        <div class="viewed-slider-prev slider-arrow-prev">
-                            <svg>
-                                <use xlink:href="assets/img/sprites/sprite.svg#arrow-prev">
-                                </use>
-                            </svg>
-                        </div>
-                        <div class="viewed-slider-next slider-arrow-next">
-                            <svg>
-                                <use xlink:href="assets/img/sprites/sprite.svg#arrow-next"></use>
-                            </svg>
-                        </div>
-                    </div>
-                </div>
-                <div class="banner-mini">
-                    <div class="banner-mini-title">
-                        Благо-Дарю
-                        <span>помог <i>отдать</i></span>
-                    </div>
-                    <div class="banner-mini-cnt">
-                        37 549
-                        <span>вещей</span>
-                    </div>
-                </div>
+            <div class="page-content page-container--result-search">
                 <div class="announcements">
                     <div class="announcements-header">
                         <h2 class="title-section">
@@ -726,6 +530,158 @@
                                     <use xlink:href="assets/img/sprites/sprite.svg#arrow-next"></use>
                                 </svg>
                             </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="viewed">
+                    <h2 class="title-section">Ранее вы смотрели</h2>
+                    <div class="viewed-slider">
+                        <a href="https://www.google.com/search?q=dog+img&tbm=isch&ved=2ahUKEwj_j7To9aH8AhWDwgIHHSh6Bn0Q2-cCegQIABAA&oq=dog+img&gs_lcp=CgNpbWcQAzIECCMQJzIECAAQHjIECAAQHjIGCAAQBRAeMgkIABCABBAKEBg6BAgAEEM6BQgAEIAEUIsGWKgNYMcPaABwAHgAgAFeiAGjA5IBATWYAQCgAQGqAQtnd3Mtd2l6LWltZ8ABAQ&sclient=img&ei=AyevY7-CHoOFi-gPqPSZ6Ac&bih=1306&biw=2560#imgrc=u61zC0xCLTOo1M"
+                           class="viewed-slider__item">
+                        <span class="viewed-slider__item-img">
+                            <img src="assets/img/card/item-1.jpg" alt="alt">
+                        </span>
+                            <span class="viewed-slider__item-description">
+                                      <span class="viewed-slider__item-title">Зеркало с люминесцентной подсветкой (120х75 см).  290G - SP20</span>
+                                <span class="viewed-slider__item-data">28.11.2022 в 12:02</span>
+                            </span>
+                            <span class="favorite-card">
+                            </span>
+                        </a>
+                        <a href="#" class="viewed-slider__item">
+                        <span class="viewed-slider__item-img">
+                            <img src="assets/img/card/item-2.jpg" alt="alt">
+                        </span>
+                            <span class="viewed-slider__item-description">
+                                  <span class="viewed-slider__item-title">Свитер желтый из нейлона (размер S)</span>
+                            <span class="viewed-slider__item-data">28.11.2022 в 12:02</span>
+                            </span>
+                            <span class="favorite-card">
+                            </span>
+                        </a>
+                        <a href="#" class="viewed-slider__item">
+                        <span class="viewed-slider__item-img">
+                            <img src="https://images.unsplash.com/photo-1615751072497-5f5169febe17?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8Y3V0ZSUyMGRvZ3xlbnwwfHwwfHw%3D&w=1000&q=80"
+                                 alt="alt">
+                        </span>
+                            <span class="viewed-slider__item-description">
+                                      <span class="viewed-slider__item-title">Зеркало с люминесцентной подсветкой (120х75 см).  290G - SP20</span>
+                                <span class="viewed-slider__item-data">28.11.2022 в 12:02</span>
+                            </span>
+                            <span class="favorite-card">
+                            </span>
+                        </a>
+                        <a href="#" class="viewed-slider__item">
+                        <span class="viewed-slider__item-img">
+                            <img src="assets/img/card/item-2.jpg" alt="alt">
+                        </span>
+                            <span class="viewed-slider__item-description">
+                                  <span class="viewed-slider__item-title">Свитер желтый из нейлона (размер S)</span>
+                            <span class="viewed-slider__item-data">28.11.2022 в 12:02</span>
+                            </span>
+                            <span class="favorite-card">
+                            </span>
+                        </a>
+                        <a href="#" class="viewed-slider__item">
+                        <span class="viewed-slider__item-img">
+                            <img src="assets/img/card/item-1.jpg" alt="alt">
+                        </span>
+                            <span class="viewed-slider__item-description">
+                                      <span class="viewed-slider__item-title">Зеркало с люминесцентной подсветкой (120х75 см).  290G - SP20</span>
+                                <span class="viewed-slider__item-data">28.11.2022 в 12:02</span>
+                            </span>
+                            <span class="favorite-card">
+                            </span>
+                        </a>
+                        <a href="#" class="viewed-slider__item">
+                        <span class="viewed-slider__item-img">
+                            <img src="assets/img/card/item-2.jpg" alt="alt">
+                        </span>
+                            <span class="viewed-slider__item-description">
+                                  <span class="viewed-slider__item-title">Свитер желтый из нейлона (размер S)</span>
+                            <span class="viewed-slider__item-data">28.11.2022 в 12:02</span>
+                            </span>
+                            <span class="favorite-card">
+                            </span>
+                        </a>
+                        <a href="#" class="viewed-slider__item">
+                        <span class="viewed-slider__item-img">
+                            <img src="assets/img/card/item-1.jpg" alt="alt">
+                        </span>
+                            <span class="viewed-slider__item-description">
+                                      <span class="viewed-slider__item-title">Зеркало с люминесцентной подсветкой (120х75 см).  290G - SP20</span>
+                                <span class="viewed-slider__item-data">28.11.2022 в 12:02</span>
+                            </span>
+                            <span class="favorite-card">
+                            </span>
+                        </a>
+                        <a href="#" class="viewed-slider__item">
+                        <span class="viewed-slider__item-img">
+                            <img src="assets/img/card/item-2.jpg" alt="alt">
+                        </span>
+                            <span class="viewed-slider__item-description">
+                                  <span class="viewed-slider__item-title">Свитер желтый из нейлона (размер S)</span>
+                            <span class="viewed-slider__item-data">28.11.2022 в 12:02</span>
+                            </span>
+                            <span class="favorite-card">
+                            </span>
+                        </a>
+                        <a href="#" class="viewed-slider__item">
+                        <span class="viewed-slider__item-img">
+                            <img src="assets/img/card/item-1.jpg" alt="alt">
+                        </span>
+                            <span class="viewed-slider__item-description">
+                                      <span class="viewed-slider__item-title">Зеркало с люминесцентной подсветкой (120х75 см).  290G - SP20</span>
+                                <span class="viewed-slider__item-data">28.11.2022 в 12:02</span>
+                            </span>
+                            <span class="favorite-card">
+                            </span>
+                        </a>
+                        <a href="#" class="viewed-slider__item">
+                        <span class="viewed-slider__item-img">
+                            <img src="assets/img/card/item-2.jpg" alt="alt">
+                        </span>
+                            <span class="viewed-slider__item-description">
+                                  <span class="viewed-slider__item-title">Свитер желтый из нейлона (размер S)</span>
+                            <span class="viewed-slider__item-data">28.11.2022 в 12:02</span>
+                            </span>
+                            <span class="favorite-card">
+                            </span>
+                        </a>
+                        <a href="#" class="viewed-slider__item">
+                        <span class="viewed-slider__item-img">
+                            <img src="assets/img/card/item-1.jpg" alt="alt">
+                        </span>
+                            <span class="viewed-slider__item-description">
+                                      <span class="viewed-slider__item-title">Зеркало с люминесцентной подсветкой (120х75 см).  290G - SP20</span>
+                                <span class="viewed-slider__item-data">28.11.2022 в 12:02</span>
+                            </span>
+                            <span class="favorite-card">
+                            </span>
+                        </a>
+                        <a href="#" class="viewed-slider__item">
+                        <span class="viewed-slider__item-img">
+                            <img src="assets/img/card/item-2.jpg" alt="alt">
+                        </span>
+                            <span class="viewed-slider__item-description">
+                                  <span class="viewed-slider__item-title">Свитер желтый из нейлона (размер S)</span>
+                            <span class="viewed-slider__item-data">28.11.2022 в 12:02</span>
+                            </span>
+                            <span class="favorite-card">
+                            </span>
+                        </a>
+                    </div>
+                    <div class="viewed-slider-arrows slider-arrows-container">
+                        <div class="viewed-slider-prev slider-arrow-prev">
+                            <svg>
+                                <use xlink:href="assets/img/sprites/sprite.svg#arrow-prev">
+                                </use>
+                            </svg>
+                        </div>
+                        <div class="viewed-slider-next slider-arrow-next">
+                            <svg>
+                                <use xlink:href="assets/img/sprites/sprite.svg#arrow-next"></use>
+                            </svg>
                         </div>
                     </div>
                 </div>
@@ -1295,8 +1251,6 @@
 
 <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jQueryFormStyler/2.0.2/jquery.formstyler.min.js"></script>
-<script src="js/air-datepicker.js"></script>
-<script src="js/jquery.maskedinput.min.js"></script>
 <script src="js/slick.js"></script>
 <script src="js/main.js"></script>
 </body>
