@@ -673,3 +673,26 @@ if(questionsList !== null){
         })
     })
 }
+
+$(".sign-in").on("click", function () {
+    $(".popUp-login").addClass("active")
+    $('.substrate').addClass("active")
+})
+
+$(".login-btn-list__item").on("click", function () {
+    $(".login-btn-list__item").removeClass("active")
+    if($(this).hasClass("login-btn")){
+        $(".registration-content").removeClass("active")
+        $(".login-content").addClass("active")
+    }else{
+        $(".login-content").removeClass("active")
+        $(".registration-content").addClass("active")
+    }
+    $(this).addClass("active")
+})
+
+$("#reset-password").on("click", function () {
+    $(".popUp-login").removeClass("active")
+    $('.popUp-reset-mail').addClass("active")
+})
+
