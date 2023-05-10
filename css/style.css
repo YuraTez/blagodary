@@ -1289,6 +1289,8 @@ input[type="checkbox"] {
 
   .subcategory{
     margin-bottom: 14px;
+    page-break-inside: avoid;
+    break-inside: avoid;
   }
 }
 
