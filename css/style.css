@@ -545,6 +545,7 @@ select.custom-select {
   font-size: 22px;
   line-height: 26px;
   margin-bottom: 20px;
+  font-feature-settings: 'pnum' on, 'lnum' on;
 }
 
 .slider-arrow-prev svg,
@@ -1818,6 +1819,10 @@ input[type="checkbox"] {
   padding-left: 20px !important;
 }
 
+.aside-cabinet .menu-subcategory-content a {
+  padding-left: 40px !important;
+}
+
 .menu-subcategory-content a.active{
   font-weight: 700;
 }
@@ -2781,6 +2786,10 @@ input[type="checkbox"] {
   overflow: hidden;
 }
 
+.card-description-text.inner{
+  height: auto;
+}
+
 .card-description-text:after {
   position: absolute;
   content: "";
@@ -2789,6 +2798,10 @@ input[type="checkbox"] {
   height: 45px;
   background: linear-gradient(180deg, rgba(255, 255, 255, 0.48) 0%, #fff 100%);
   transition: .3s ease;
+}
+
+.card-description-text.inner:after{
+  content: none;
 }
 
 .card-description-text.active:after {
@@ -3435,6 +3448,7 @@ input[type="checkbox"] {
 
 .form-group-rate {
   display: flex;
+  flex-direction: row;
   align-items: center;
   gap: 16px;
 }
@@ -4111,14 +4125,14 @@ input[type="checkbox"] {
   text-align: left;
 }
 
-.description-referral-program__text{
+.description-referral-program p{
   font-size: 13px;
   line-height: 15px;
   letter-spacing: -0.01em;
   font-feature-settings: 'pnum' on, 'lnum' on;
 }
 
-.description-referral-program__text:not(:last-child){
+.description-referral-program p:not(:last-child){
   margin-bottom: 10px;
 }
 
@@ -4301,6 +4315,10 @@ input[type="checkbox"] {
   display: flex;
   flex-direction: column;
   min-width: 274px;
+}
+
+.popUp-login .form-group{
+
   max-width: 274px;
 }
 
@@ -4677,7 +4695,8 @@ input[type="checkbox"] {
   transition: 0.3s;
 }
 
-.category-selection-list__item:hover{
+.category-selection-list__item:hover,
+.category-selection-list__item.active{
   font-weight: 600;
   font-size: 14px;
   line-height: 16px;
@@ -5188,23 +5207,18 @@ input[type="checkbox"] {
   }
 }
 
-
-
-
-
-
-
-
-
-
-.title_h1 {
+.title_h1,
+.services-more h1,
+.section-text h1{
   font-weight: 800;
   font-size: 22px;
   line-height: 26px;
   margin: 20px 0;
 }
 
-.title_h2{
+.title_h2,
+.services-more h2,
+.section-text h2{
   font-weight: 800;
   font-size: 20px;
   line-height: 23px;
@@ -5216,7 +5230,9 @@ input[type="checkbox"] {
   margin: 20px 0 20px;
 }
 
-.title_h3 {
+.title_h3,
+.services-more h3,
+.section-text h3{
   font-weight: 700;
   font-size: 16px;
   line-height: 19px;
@@ -5224,7 +5240,9 @@ input[type="checkbox"] {
   margin: 20px 0 10px;
 }
 
-.title_h4 {
+.title_h4,
+.services-more h4,
+.section-text h4{
   font-weight: 700;
   font-size: 14px;
   line-height: 16px;
@@ -5233,7 +5251,9 @@ input[type="checkbox"] {
   margin: 20px 0 10px;
 }
 
-.text-page {
+.text-page,
+.services-more p,
+.section-text p {
   font-weight: 400;
   font-size: 13px;
   line-height: 15px;
@@ -5243,15 +5263,19 @@ input[type="checkbox"] {
   margin: 10px 0;
 }
 
-.text-page__link{
+.text-page__link,
+.services-more p a,
+.section-text p a{
   color: #8F8F8F;
 }
 
-.news-list {
+.news-list,
+.services-more ul{
   margin: 10px 0 20px;
 }
 
-.news-list__item {
+.news-list__item,
+.services-more li{
   position: relative;
   padding-left: 20px;
   font-weight: 400;
@@ -5263,7 +5287,8 @@ input[type="checkbox"] {
   margin: 5px 0;
 }
 
-.news-list__item:before {
+.news-list__item:before ,
+.services-more li:before{
   position: absolute;
   content: "";
   width: 2px;
@@ -5280,11 +5305,13 @@ ul .news-list__item:before {
 .news-list--number {
   counter-reset: li;
 }
-.news-list--number .news-list__item {
+.news-list--number .news-list__item,
+.news-list--number li{
   padding-left: 9px;
 }
 
-.news-list--number .news-list__item:before {
+.news-list--number .news-list__item:before,
+.news-list--number li:before{
   position: relative;
   background: none;
   counter-increment: li;
@@ -5528,6 +5555,10 @@ ul .news-list__item:before {
   margin-bottom: 15px;
 }
 
+.mb-20{
+  margin-bottom: 20px;
+}
+
 .description-password{
   margin-top: 10px;
 }
@@ -5695,5 +5726,146 @@ ul .news-list__item:before {
 
   .popUp-login {
     padding: 15px 8px 40px;
+  }
+}
+
+.complain-form .form-group{
+  max-width: inherit;
+}
+
+.complain__text{
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 15px;
+  letter-spacing: -0.01em;
+  font-feature-settings: 'pnum' on, 'lnum' on;
+  color: #858585;
+  border-bottom: 1px dashed #858585;
+  transition: 0.3s;
+}
+
+.complain:hover .complain__text{
+  color: #059EA3;
+  border-bottom: 1px dashed #059EA3;
+}
+
+.no-arrow + .viewed-slider-arrows{
+  display: none;
+}
+
+.viewed-slider.no-arrow{
+  gap: 17px;
+}
+
+.form-group-rate{
+ flex-direction: row;
+}
+
+.referral-link-btn{
+  position: relative;
+}
+
+.referral-link-btn:before{
+  position: absolute;
+  content: "Скопировано!";
+  top: 0%;
+  left: 50%;
+  transform: translate(-50%);
+  transition: 0.3s;
+  opacity: 0;
+  z-index: -1;
+  padding: 5px;
+  background: #FAE26E;
+  border: 5px;
+}
+
+.referral-link-btn.copy:before{
+  opacity: 1;
+  z-index: 1;
+  top: -90%;
+}
+
+.popUp-success{
+  padding: 66px 0;
+}
+
+.popUp-success .popUp__title{
+  margin: 0;
+}
+
+.from-person-location .form-group,
+.from-person-phone .form-group{
+  max-width: 274px;
+}
+
+.product-name .form-group{
+  max-width: 386px;
+}
+
+.remove_phone{
+  position: absolute;
+  right: -25px;
+  top: 0;
+  width: 15px;
+  height: 15px;
+  cursor: pointer;
+}
+
+.remove_phone svg{
+  width: 10px;
+  height: 10px;
+}
+
+.form-reset-password .data-user__label{
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: -0.01em;
+  font-feature-settings: 'pnum' on, 'lnum' on;
+}
+
+@media (max-width: 768px) {
+  .preview-remove {
+    top: 0;
+    right: 0;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .favorite-card {
+    position: absolute;
+    width: 42px;
+    height: 39px;
+    top: 0;
+    right: 0;
+  }
+}
+
+.error-block{
+  display: none;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  align-items: center;
+  letter-spacing: -0.01em;
+  color: #E91A1A;
+  margin-top: 5px;
+}
+
+.form-group.error .error-block{
+  display: block;
+}
+
+.form-group.error input,
+.form-group.error textarea{
+  border-color: #FC0000;
+  background: white url("../assets/img/error.svg") no-repeat 96% 50%;
+}
+
+@media (max-width: 340px) {
+  .file-text:after{
+    width: 80px;
   }
 }

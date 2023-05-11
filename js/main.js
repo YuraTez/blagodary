@@ -58,8 +58,9 @@ function selectCountry(ev) {
 }
 
 if (innerWidth > 1220) {
+    const slideCnt = document.querySelectorAll(".viewed-slider__item").length;
 
-    if ($('.viewed-slider').hasClass("viewed-slider--big")) {
+    if ($('.viewed-slider').hasClass("viewed-slider--big") && slideCnt > 5) {
         $('.viewed-slider--big').slick({
             infinite: true,
             dots: false,
@@ -70,7 +71,7 @@ if (innerWidth > 1220) {
             prevArrow: '.viewed-slider-prev',
             nextArrow: '.viewed-slider-next',
         });
-    } else {
+    } else if(slideCnt > 4) {
         $('.viewed-slider').slick({
             infinite: true,
             dots: false,
@@ -81,7 +82,10 @@ if (innerWidth > 1220) {
             prevArrow: '.viewed-slider-prev',
             nextArrow: '.viewed-slider-next',
         });
+    }else{
+        $('.viewed-slider').addClass("no-arrow");
     }
+
 }
 
 function favoriteCard(el) {
@@ -247,13 +251,15 @@ if (categoryForm) {
             let target = event.target;
 
             if(target.closest(".category-selection-list__item")){
+                $(".category-selection-list__item").removeClass("active");
                 let text = target.closest(".category-selection-list__item").innerText;
                 $(".category-selection").hide(600)
                 $('html, body').animate({
                     scrollTop: $("#categorySelection").offset().top - 120
                 }, 1000);
                 categorySelectionReady.classList.add("active")
-                formCategorySelectedItem.innerText = text
+                formCategorySelectedItem.innerText = text;
+                target.classList.add("active");
             }
         })
     }
@@ -391,16 +397,21 @@ $('.btn-pick-up').on('click', function () {
 if ($(".card-description-text").length) {
     let innerHeight = $(".card-description-text").height();
     let curHeight = $(".card-description-text").get(0).scrollHeight;
-
-    $('.card-description-text-btn').on('click', function () {
-        if (!this.classList.contains('active')) {
-            $(".card-description-text").animate({height: curHeight}, 1000);
-        } else {
-            $(".card-description-text").animate({height: innerHeight}, 1000);
+        if(curHeight > innerHeight){
+            $(".card-description-text").addClass("scroll");
+            $('.card-description-text-btn').on('click', function () {
+                if (!this.classList.contains('active')) {
+                    $(".card-description-text").animate({height: curHeight}, 1000);
+                } else {
+                    $(".card-description-text").animate({height: innerHeight}, 1000);
+                }
+                $(".card-description-text-btn").toggleClass("active");
+                $(".card-description-text").toggleClass("active");
+            });
+        }else{
+            $(".card-description-text").addClass("inner");
+            $('.card-description-text-btn').remove();
         }
-        $(".card-description-text-btn").toggleClass("active");
-        $(".card-description-text").toggleClass("active");
-    });
 }
 
 
@@ -468,7 +479,11 @@ if (subscriptionSwitch) {
 $('.referral-link-btn').on('click', function () {
     let copyText = document.querySelector(".referral-program__link");
     copyText.value;
-    navigator.clipboard.writeText(copyText.value)
+    navigator.clipboard.writeText(copyText.value);
+    $('.referral-link-btn').addClass("copy");
+    setTimeout(()=>{
+        $('.referral-link-btn').removeClass("copy")
+    }, 1000)
 });
 
 
@@ -508,12 +523,16 @@ const templatePhone = `
  <div class="form-group form-group--tel">
      <label class="data-user__label data-user__label--tel">Контактный телефон</label>
      <input type="tel" placeholder="+375 (xx) xxx-xx-xx" class="dataUserTel" name="new-number">
+     <span class="remove_phone"><svg><use xlink:href="assets/img/sprites/sprite.svg#cross-popup"></use></svg></span>
  </div>
 `
 
 $('.add-new-phone').on('click', function () {
     $('.form-tel-container').append(templatePhone)
     maskPhone()
+    $(".remove_phone").on("click",function(event){
+        this.parentElement.remove();
+    })
 });
 
 $('.password-control').on('click', function () {
@@ -525,6 +544,8 @@ $('.password-control').on('click', function () {
         $(this).prev().attr('type', 'password');
     }
 });
+
+
 
 // Загрузка фото в объявлении
 
@@ -627,7 +648,7 @@ if(dropzone){
 
 
 $("#announcementTextarea").on("input", function () {
-    $(".result-text-value").text(this.value.length)
+    $(".result-text-value").text(this.value.length);
 })
 
 
@@ -675,8 +696,8 @@ if(questionsList !== null){
 }
 
 $(".sign-in").on("click", function () {
-    $(".popUp-login").addClass("active")
-    $('.substrate').addClass("active")
+    $(".popUp-login").addClass("active");
+    $('.substrate').addClass("active");
 })
 
 $(".login-btn-list__item").on("click", function () {
@@ -694,5 +715,10 @@ $(".login-btn-list__item").on("click", function () {
 $("#reset-password").on("click", function () {
     $(".popUp-login").removeClass("active")
     $('.popUp-reset-mail').addClass("active")
+})
+
+$(".data-user-btn").on("click", function () {
+    $(".popUp-success").addClass("active");
+    $('.substrate').addClass("active");
 })
 
