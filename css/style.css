@@ -5871,14 +5871,14 @@ ul .news-list__item:before {
 }
 
 @media (min-width: 900px) {
-  .page-container {
+  .category-pop-up {
     display: flex;
     gap: 30px;
     max-height: 75vh;
     overflow: auto;
   }
 
-  .page-content{
+  .category-pop-up{
     overflow: hidden;
   }
 }
